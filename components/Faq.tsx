@@ -9,9 +9,6 @@ import {motion} from "framer-motion";
 import {FC, Fragment, useState} from "react";
 import {IFaq} from "@/types/components/index";
 
-// Styling
-import styles from "../styles/components/OurServices.module.scss";
-
 // Components
 import Paragraph from "./Elements/Paragraph";
 
@@ -25,10 +22,7 @@ const Faq: FC<IFaq> = ({title, subtitle, paragraph, faqGrid}) => {
 	return (
 		<>
 			<div
-				className={
-					styles.faq +
-					" relative py-12 sm:py-16 px-4 bg-white bg-cover bg-center bg-no-repeat"
-				}
+				className=" relative py-12 sm:py-16 px-4 bg-white bg-cover bg-center bg-no-repeat"
 				style={{
 					backgroundImage: `url("/svg/background/polygon-scatter-haikei-lightgrey.svg")`,
 				}}
@@ -101,7 +95,7 @@ const Faq: FC<IFaq> = ({title, subtitle, paragraph, faqGrid}) => {
 														>
 															<button
 																onClick={() => handleButtonClick(keys)}
-																className={`flex items-center justify-center text-tiny font-semibold hover:text-tertiary-default ${
+																className={`flex items-center justify-center text-tiny font-semibold hover:text-accent-default ${
 																	selectedItemIndex === keys
 																		? "text-accent-default"
 																		: "text-black"

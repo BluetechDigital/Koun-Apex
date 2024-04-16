@@ -71,7 +71,7 @@ const Hero: FC<IHero> = ({
 										priority
 										className="my-auto lg:mx-0 rounded-full w-10 h-10 object-cover object-center"
 										alt={`Facebook reviews logo`}
-										src="/img/facebook-logo-blue-circle-large-white.webp"
+										src="/img/facebook-logo-primary-circle-large-white.webp"
 										width={500}
 										height={500}
 									/>
@@ -126,7 +126,7 @@ const Hero: FC<IHero> = ({
 									href={`${buttonLinkTwo?.url}`}
 									target={buttonLinkTwo?.target}
 									aria-label={`${buttonLinkTwo?.title}`}
-									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-primary-two hover:bg-accent-three transition-all ease-in-out duration-500 font-semibold uppercase text-lightGrey text-base text-center font-ObjectSans`}
+									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-primary-two hover:bg-accent-two transition-all ease-in-out duration-500 font-semibold uppercase text-lightGrey text-base text-center font-ObjectSans`}
 								>
 									{buttonLinkTwo?.title}
 								</Link>
@@ -191,7 +191,7 @@ const Hero: FC<IHero> = ({
 														: keys === 2
 														? "bg-accent-two"
 														: keys === 3
-														? "bg-accent-three"
+														? "bg-accent-two"
 														: "bg-primary-default"
 												}`}
 											>

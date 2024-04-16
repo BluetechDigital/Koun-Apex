@@ -1,7 +1,12 @@
 /*===== FONTS =====*/
 @font-face {
-	font-family: Inter;
-	src: url("../fonts/Inter.woff");
+	font-family: schaboCondensed;
+	src: url("../fonts/schabo-condensed.woff");
+}
+
+@font-face {
+	font-family: borexRegular;
+	src: url("../fonts/borex-regular.woff");
 }
 
 @font-face {
@@ -10,16 +15,21 @@
 }
 
 @font-face {
-	font-family: TelkaRegular;
-	src: url("../fonts/TelkaRegular.woff");
+	font-family: trigueSans;
+	src: url("../fonts/trigue-sans.woff");
 }
 
 // Font Stack Properties
-$main: "TelkaRegular", "PlusJakartaSans";
-$body: "PlusJakartaSans", "Inter";
+$main: "borexRegular", "PlusJakartaSans";
+$secondary: "schaboCondensed", "PlusJakartaSans";
+$body: "PlusJakartaSans", "PlusJakartaSans";
 
-.font-TelkaRegular {
+.font-borexRegular {
 	font-family: $main;
+}
+
+.font-schaboCondensed {
+	font-family: $secondary;
 }
 
 .font-PlusJakartaSans {

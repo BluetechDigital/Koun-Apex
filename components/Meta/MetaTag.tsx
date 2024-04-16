@@ -10,7 +10,7 @@ const MetaTag = () => {
 			{/* <!-- Website Title --> */}
 			<title key="title">{`${pageContext?.seo?.title} | Official Website`}</title>
 			<meta name="description" content={pageContext?.seo?.metaDesc} />
-			<link rel="icon" href="/img/logos/max-lynn-carpentry-logo.jpg" />
+			<link rel="icon" href="/img/logos/Koun-Apex-Logo-Two.png" />
 			<meta
 				name="robots"
 				content={`${pageContext?.seo?.metaRobotsNoindex} , ${pageContext?.seo?.metaRobotsNofollow}`}

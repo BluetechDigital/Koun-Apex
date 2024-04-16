@@ -8,76 +8,64 @@
 	}
 
 	.aboutUsSublinks,
-	.ourServicesLinks {
+	.servicesSublinks {
 		li:nth-last-child(0) {
 			display: none;
 			@apply border-none;
 		}
 	}
 
-	.nav {
-		top: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 998;
-		display: flex;
-		position: fixed;
-		max-width: 35rem;
-		overflow: hidden;
-		width: 83.333333%;
-		visibility: hidden;
-		transition: all 500ms ease-in-out;
-		clip-path: circle(30px at calc(100% - 45px) 45px);
+	.ourServicesLinks {
+		li {
+			a {
+				font-family: $body;
+			}
+		}
 	}
 
 	.nav {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 998;
+		display: flex;
+		width: 83.33%;
+		position: fixed;
+		max-width: 30rem;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	// Reveal Fullscreen Nav
+	.navReveal {
+		right: 0px;
+		visibility: visible;
+		transition: all 0.5s ease-in-out;
+
 		::-webkit-scrollbar {
-			// display: none;
 			width: 0.65rem;
 			height: 0.65rem;
 		}
 
 		::-webkit-scrollbar-track {
-			background: $darkBlue;
+			background: $accent-default;
 		}
 
 		::-webkit-scrollbar-thumb {
-			background: $blue;
+			background: $primary-default;
 			border-radius: 100px;
 
 			&:hover {
 				transition: all 0.5s;
-				background-color: $lightBlue;
+				background-color: $accent-default;
 			}
 		}
 	}
 
-	// Reveal Fullscreen Nav
-	.navReveal {
-		visibility: visible;
-		clip-path: circle(100%);
-	}
-
 	.navToggle {
-		cursor: pointer;
-		position: fixed;
-		z-index: 999;
-		right: 0px;
-		top: 15px;
-		padding: 0px;
-		width: 50px;
-		height: 45px;
-		border: none;
-		line-height: 0.6;
-		background: $blue;
-		border-radius: 0px;
-		text-align: center;
-		margin-right: 15px;
-		transition: all 1s ease-in-out;
-
 		&:hover {
 			transition: all 0.2s ease-in-out;
-			background: $purple;
+			background: $accent-two;
 		}
 
 		span {
@@ -127,17 +115,15 @@
 		cursor: pointer;
 		position: fixed;
 		z-index: 999;
-		right: 0px;
-		top: 15px;
+		left: 25px;
+		top: 20px;
 		padding: 0;
 		width: 50px;
 		height: 45px;
 		border: none;
 		line-height: 0.6;
-		background: $blue;
 		text-align: center;
-		border-radius: 0px;
-		margin-right: 15px;
+		background: $accent-default;
 		transition: all 1s ease-in-out;
 
 		span {
@@ -176,8 +162,8 @@
 		}
 
 		&:hover {
+			background: $accent-two;
 			transition: all 0.2s ease-in-out;
-			background: $purple;
 		}
 	}
 }

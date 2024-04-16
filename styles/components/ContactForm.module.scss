@@ -3,9 +3,9 @@
 @import "../base/colors";
 
 .submitButton {
-	@apply w-fit flex items-center justify-center py-3 px-6 bg-blue-default hover:bg-blue-darker transition-all duration-200 ease-in-out;
+	@apply w-fit flex items-center justify-center py-3 px-6 bg-primary-default hover:bg-primary-darker transition-all duration-200 ease-in-out;
 }
 
 .messageSent {
-	@apply w-fit flex items-center justify-center py-3 px-6 bg-yellow-default;
+	@apply w-fit flex items-center justify-center py-3 px-6 bg-accent-default;
 }

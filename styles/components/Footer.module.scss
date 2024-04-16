@@ -3,23 +3,17 @@
 @import "../base/colors";
 
 .footer {
-	clip-path: none;
-
 	.socialLinks {
 		svg:hover {
-			fill: $yellow;
+			fill: $accent-default;
 
 			g,
 			path {
-				fill: $yellow;
+				fill: $accent-default;
 			}
 			line {
-				fill: $yellow;
+				fill: $accent-default;
 			}
 		}
-	}
-
-	@media screen and (min-width: 992px) {
-		clip-path: polygon(66% 6%, 100% 2%, 100% 100%, 0 100%, 0 1%);
 	}
 }

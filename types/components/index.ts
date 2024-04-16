@@ -349,7 +349,7 @@ export type IParagraph = {
 	tailwindStyling: string;
 };
 export type IRenderStars = {
-	starRating: number;
+	rating: number;
 };
 export type IVideoWrapper = {
 	children: React.ReactNode;

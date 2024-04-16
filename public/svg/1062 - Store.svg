@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="2048px" height="2048px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 2048 2048"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none}
+    .fil4 {fill:#212121}
+    .fil1 {fill:#f51d05}
+    .fil2 {fill:#212121;fill-rule:nonzero}
+    .fil3 {fill:#f51d05;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="2048" height="2048"/>
+  <rect class="fil0" x="255.999" y="255.999" width="1536" height="1536"/>
+  <polygon class="fil1" points="927.52,1632 1087.76,1632 1087.76,1792 927.52,1792 "/>
+  <path class="fil2" d="M543.997 802.159l960.005 0 32.0008 0 0 32.0008 0 925.842 221.871 0 0 -1125.84 -755.421 -342.949 -712.329 342.371 0 1126.42 221.871 0 0 -925.842 0 -32.0008 32.0008 0zm928.005 64.0016l-896.004 0 0 925.842 0 32.0008 -32.0008 0 -285.873 0 -32.0008 0 0 -32.0008 0 -1178.4 0 -19.9784 18.2504 -8.77205 744.035 -357.611 13.4563 -6.46654 13.4197 6.09213 787.717 357.611 18.8752 8.57009 0 20.5547 0 1178.4 0 32.0008 -32.0008 0 -285.873 0 -32.0008 0 0 -32.0008 0 -925.842z"/>
+  <polygon class="fil3" points="1667.13,763.443 1005.76,449.764 381.447,762.201 352.947,705.201 991.211,385.784 1005.16,378.803 1019.09,385.408 1694.38,705.691 "/>
+  <polygon class="fil4" points="1183.76,1632 1344,1632 1344,1792 1183.76,1792 "/>
+  <polygon class="fil4" points="671.761,1632 832.001,1632 832.001,1792 671.761,1792 "/>
+  <polygon class="fil4" points="927.52,1376 1087.76,1376 1087.76,1536 927.52,1536 "/>
+  <polygon class="fil4" points="1183.76,1376 1344,1376 1344,1536 1183.76,1536 "/>
+  <polygon class="fil1" points="671.761,1376 832.001,1376 832.001,1536 671.761,1536 "/>
+  <polygon class="fil1" points="927.76,1120 1088,1120 1088,1280 927.76,1280 "/>
+  <polygon class="fil4" points="672.001,1120 832.241,1120 832.241,1280 672.001,1280 "/>
+ </g>
+</svg>

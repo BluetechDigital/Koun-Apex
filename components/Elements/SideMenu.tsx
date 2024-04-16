@@ -43,7 +43,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 								width={500}
 								height={500}
 								alt="Max Lynn Carpentry Logo"
-								src="/img/logos/max-lynn-carpentry-logo.jpg"
+								src="/img/logos/Koun-Apex-Logo-Two.png"
 								className="object-contain object-center w-[105px] h-[85px]"
 							/>
 						</Link>
@@ -76,7 +76,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 														href={item?.node?.url}
 														target={`${item?.node?.target}`}
 														aria-label={`${item?.node?.label}`}
-														className=" font-ObjectSans uppercase text-primary-default text-base hover:text-accent-three transition-all duration-200 ease-in-out"
+														className=" font-ObjectSans uppercase text-primary-default text-base hover:text-accent-two transition-all duration-200 ease-in-out"
 													>
 														{item?.node?.label}
 													</Link>
@@ -160,7 +160,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 														item?.node?.target ? item?.node?.target : "_self"
 													}`}
 													aria-label={`${item?.node?.label}`}
-													className="block py-4 font-ObjectSans uppercase text-primary-default text-base hover:text-accent-three transition-all duration-200 ease-in-out"
+													className="block py-4 font-ObjectSans uppercase text-primary-default text-base hover:text-accent-two transition-all duration-200 ease-in-out"
 												>
 													{item?.node?.label}
 												</Link>

@@ -572,7 +572,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 										className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-primary-darker focus:border-primary-darker focus:ring-[1px] focus:ring-primary-darker"
 									/>
 								</motion.div>
-								<motion.div
+								{/* <motion.div
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
@@ -610,7 +610,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 											<></>
 										)}
 									</Field>
-								</motion.div>
+								</motion.div> */}
 								<motion.div
 									initial={initial}
 									whileInView={fadeInUp}
@@ -647,7 +647,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 									}
 								>
 									<ReCAPTCHA
-										sitekey={`6Lcb2rQpAAAAAIyP_tcS5urSOS2opAg18WTXpebR`}
+										sitekey={`6LeM-7wpAAAAAMG4T76KlIZWVPg97C7TVHOEZD-I`}
 										onChange={handleReCaptchaChange}
 									/>
 								</motion.div>

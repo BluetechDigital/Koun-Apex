@@ -488,7 +488,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 									}
 								>
 									<ReCAPTCHA
-										sitekey={`6Lcb2rQpAAAAAIyP_tcS5urSOS2opAg18WTXpebR`}
+										sitekey={`6LeM-7wpAAAAAMG4T76KlIZWVPg97C7TVHOEZD-I`}
 										onChange={handleReCaptchaChange}
 									/>
 								</motion.div>

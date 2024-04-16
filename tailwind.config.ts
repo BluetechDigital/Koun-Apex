@@ -49,20 +49,15 @@ const config: Config = {
 
 			// Main colors
 			primary: {
-				default: "#2563eb",
-				two: "#3978ff",
-				light: "#3d77f3",
-				dark: "#09275e",
-				darker: "#0d172a",
-				darkerTwo: "#061229",
+				default: "#f51d05",
+				two: "#d63725",
+				dark: "#6c2424",
+				darker: "#35090a",
 			},
 			accent: {
-				default: "#f6ad37",
-				two: "#e8b042",
-				three: "#fac546",
-				light: "#fbbc57",
-				dark: "#e4a002",
-				darker: "#bc7700",
+				default: "#15c9c1",
+				two: "#3ac7c0",
+				dark: "#037872",
 			},
 		},
 	},

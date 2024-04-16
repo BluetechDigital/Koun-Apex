@@ -34,12 +34,12 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-	background: $blue;
+	background: $primary-default;
 	border-radius: 100px;
 
 	&:hover {
 		transition: all 0.5s;
-		background-color: $lightBlue;
+		background-color: $primary-default;
 	}
 }
 
@@ -81,7 +81,7 @@ h2 {
 
 .swiper-button-prev,
 .swiper-button-next {
-	@apply mt-64 lg:mt-0 w-16 h-16 p-8 border-2 border-blue-darker hover:border-blue-darker text-blue-darker hover:text-blue-darker;
+	@apply mt-64 lg:mt-0 w-16 h-16 p-8 border-2 border-primary-darker hover:border-primary-darker text-primary-darker hover:text-primary-darker;
 
 	top: 85% !important;
 
@@ -96,7 +96,7 @@ h2 {
 	height: 15px !important;
 	font-size: 15px !important;
 	font-weight: 900 !important;
-	color: $darkBlue !important;
+	color: $primary-dark !important;
 }
 
 .swiper-button-next::after {
@@ -105,7 +105,7 @@ h2 {
 	height: 15px !important;
 	font-size: 15px !important;
 	font-weight: 900 !important;
-	color: $darkBlue !important;
+	color: $primary-dark !important;
 }
 
 /* SQUARE BOX CUBES

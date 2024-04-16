@@ -115,7 +115,7 @@ const FAQTwo: FC<IFAQTwo> = ({
 									href={`${buttonLink?.url}`}
 									target={buttonLink?.target}
 									aria-label={`${buttonLink?.title}`}
-									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-primary-two hover:bg-accent-three transition-all ease-in-out duration-500 font-semibold uppercase text-lightGrey text-base text-center font-ObjectSans ${
+									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-primary-two hover:bg-accent-two transition-all ease-in-out duration-500 font-semibold uppercase text-lightGrey text-base text-center font-ObjectSans ${
 										buttonLink?.url
 											? "lg:block absolute bottom-0 left-0"
 											: "lg:hidden"

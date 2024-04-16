@@ -15,7 +15,7 @@ const CTACard: FC<ICTACard> = ({title, paragraph, buttonLink}) => {
 			<div
 				className="bg-top bg-no-repeat bg-cover"
 				style={{
-					backgroundImage: `url("/svg/background/layered-peaks-haikei-blue-bluedarker-two.svg")`,
+					backgroundImage: `url("/svg/background/layered-peaks-haikei-primary-bluedarker-two.svg")`,
 				}}
 			>
 				<div className="lg:container px-4 py-12 mx-auto">
@@ -41,7 +41,7 @@ const CTACard: FC<ICTACard> = ({title, paragraph, buttonLink}) => {
 							aria-label={`${buttonLink?.title}`}
 							className={buttonLink?.url ? "block" : "hidden"}
 						>
-							<div className="py-6 pl-4 pr-10 cursor-pointer bg-accent-default hover:bg-tertiary-default transition-all ease-in-out duration-500">
+							<div className="py-6 pl-4 pr-10 cursor-pointer bg-accent-default hover:bg-accent-default transition-all ease-in-out duration-500">
 								<span className="font-ObjectSans uppercase relative flex items-center justify-center pl-4 text-lightGrey text-base text-center">
 									{buttonLink?.title}
 									<Image

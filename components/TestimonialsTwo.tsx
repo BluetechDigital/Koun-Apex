@@ -60,7 +60,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({title, subtitle}) => {
 									priority
 									className="my-auto lg:mx-0 rounded-full w-10 h-10 object-cover object-center"
 									alt={`Facebook reviews logo`}
-									src="/img/facebook-logo-blue-circle-large-white.webp"
+									src="/img/facebook-logo-primary-circle-large-white.webp"
 									width={500}
 									height={500}
 								/>

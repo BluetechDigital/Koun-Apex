@@ -26,10 +26,10 @@ const Accreditations: FC<IAccreditations> = ({
 			<div
 				className={
 					styles.accreditations +
-					" accreditations bg-accent-three lg:bg-white bg-center bg-no-repeat bg-cover"
+					" accreditations bg-accent-two lg:bg-white bg-center bg-no-repeat bg-cover"
 				}
 				style={{
-					backgroundImage: `url("/svg/background/layered-peaks-haikei-blue-bluedarker-two.svg")`,
+					backgroundImage: `url("/svg/background/layered-peaks-haikei-primary-bluedarker-two.svg")`,
 				}}
 			>
 				<div className="flex flex-col lg:flex-row items-center justify-between px-4 py-10 lg:py-0 lg:px-0 lg:container mx-auto gap-10 lg:gap-20">
