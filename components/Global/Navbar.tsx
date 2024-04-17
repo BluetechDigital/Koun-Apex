@@ -1,9 +1,10 @@
 "use client";
 
 // Imports
-import fadeInUp, {
+import {
 	initial,
 	stagger,
+	fadeInUp,
 	arrayLoopStaggerChildren,
 } from "@/animations/animations";
 import Link from "next/link";
@@ -34,7 +35,7 @@ const Navbar: FC = () => {
 
 	return (
 		<>
-			<nav className={styles.navbar + ` z-[999] h-fit w-full fixed`}>
+			<nav className={styles.navbar + ` navbar z-[999] h-fit w-full fixed`}>
 				<NoticeInfoBanner />
 				<motion.div
 					initial={initial}
@@ -92,13 +93,18 @@ const Navbar: FC = () => {
 							type="button"
 							onClick={toggleMenu}
 							aria-label="toggle menu"
-							className={`${menuActive ? "hidden" : "block"} ${
+							className={`hamburger-lines bg-tertiary-default hover:bg-accent-default p-2  ${
 								globalContext?.themesOptionsContent?.displayNoticeBanner
 									? "top-[62.5px]"
 									: "top-[20px]"
-							} bg-primary-default w-[50px] h-[50px] cursor-pointer flex flex-col hover:bg-accent-default hover:opacity-70 transition-all duration-200 ease-in-out`}
+							} w-[50px] h-[50px] cursor-pointer group flex flex-col items-center justify-center transition-all duration-200 ease-in-out`}
 						>
-							<span aria-hidden="true"></span>
+							<span className="line line1" aria-hidden="true"></span>
+							<span className="line line2" aria-hidden="true"></span>
+							<span className="line line3" aria-hidden="true"></span>
+							<span className="font-schaboCondensed text-lg text-center text-primary-default group-hover:text-white uppercase">
+								Menu
+							</span>
 						</motion.button>
 						<Link href="/" target="_self" aria-label="Koun Apex Website Link">
 							<Image
@@ -167,7 +173,7 @@ const Navbar: FC = () => {
 							href="/cart"
 							target="_self"
 							aria-label="Shopping Cart Logo"
-							className="py-0 px-2 bg-primary-default"
+							className="py-0 px-2"
 						>
 							<Image
 								priority
@@ -175,7 +181,7 @@ const Navbar: FC = () => {
 								height={500}
 								alt="Shopping Cart Logo"
 								src="/svg/e-commerce/1029 - Shopping Cart.svg"
-								className="object-contain object-center w-full h-16 hover:opacity-70 transition-all duration-200 ease-in-out"
+								className="object-contain object-center w-full h-12 hover:opacity-70 transition-all duration-200 ease-in-out"
 							/>
 						</Link>
 					</div>
@@ -233,9 +239,9 @@ const Navbar: FC = () => {
 				</motion.div>
 
 				{/* Hidden Tablet & Mobile  Side Menu */}
-				<div className={menuActive ? "flex flex-col xl:block" : "hidden"}>
+				{/* <div className={menuActive ? "flex flex-col xl:block" : "hidden"}>
 					<SideMenu menuActive={menuActive} setMenuActive={setMenuActive} />
-				</div>
+				</div> */}
 			</nav>
 		</>
 	);

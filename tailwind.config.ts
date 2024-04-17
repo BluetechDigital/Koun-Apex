@@ -59,6 +59,11 @@ const config: Config = {
 				two: "#3ac7c0",
 				dark: "#037872",
 			},
+			tertiary: {
+				default: "#0e2431",
+				two: "#0e2431",
+				dark: "#0e2431",
+			},
 		},
 	},
 	plugins: [],

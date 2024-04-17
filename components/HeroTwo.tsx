@@ -21,11 +21,11 @@ const HeroTwo: FC<IHeroTwo> = ({title, paragraph, backgroundImage}) => {
 	return (
 		<>
 			<div className={styles.heroTwo}>
-				<div className="lg:relative z-50 pt-[85px] lg:pt-[100px] lg:h-[60vh] flex flex-col lg:flex-row">
+				<div className="lg:relative z-50 lg:h-[25vh] flex flex-col lg:flex-row">
 					<div
 						className={
 							styles.leftSideContent +
-							" px-4 xl:px-28 py-16 lg:py-8 bg-lightGreyTwo w-full xl:w-1/2"
+							" px-4 xl:px-28 py-16 lg:py-8 bg-tertiary-default w-full xl:w-1/2"
 						}
 					>
 						<motion.div
@@ -38,7 +38,7 @@ const HeroTwo: FC<IHeroTwo> = ({title, paragraph, backgroundImage}) => {
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="text-center lg:text-left uppercase text-lg lg:text-xl xl:text-3xl text-black font-extrabold xl:leading-[2.5rem]"
+								className="text-center lg:text-left uppercase text-lg lg:text-xl xl:text-3xl text-white xl:leading-[2.5rem]"
 							>
 								{title}
 							</motion.h1>
