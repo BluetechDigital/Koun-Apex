@@ -30,20 +30,9 @@ export type IFAQ = {
 	];
 };
 export type IHero = {
-	video: string;
-	titleEnd: string;
+	title: string;
 	paragraph: string;
-	titleStart: string;
-	titleMiddle: string;
-	displayVideo: boolean;
-	videoBackgroundImage: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			width: number;
-			height: number;
-		};
-	};
+	ctaParagraph: string;
 	buttonLink: {
 		url: string;
 		title: string;
@@ -54,30 +43,31 @@ export type IHero = {
 		title: string;
 		target: string;
 	};
-	rightsideImage: {
+	backgroundImage: {
 		altText: string;
 		sourceUrl: string;
 		mediaDetails: {
-			height: number;
 			width: number;
+			height: number;
 		};
 	};
-	smallImageOne: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			height: number;
-			width: number;
-		};
-	};
-	smallImageTwo: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			height: number;
-			width: number;
-		};
-	};
+	servicesLinks: [
+		{
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+		}
+	];
 };
 export type IStore = {
 	title: string;
@@ -181,6 +171,20 @@ export type IMaintenance = {
 			height: number;
 		};
 	};
+};
+export type IFeaturedBrand = {
+	brandsGrid: [
+		{
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
 };
 export type IAccreditations = {
 	paragraph: string;

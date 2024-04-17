@@ -94,9 +94,9 @@ const Faq: FC<IFaq> = ({title, subtitle, paragraph, faqGrid}) => {
 															className="mb-6 lg:pr-6"
 														>
 															<button
-																onClick={() => handleButtonClick(keys)}
+																onClick={() => handleButtonClick(index)}
 																className={`flex items-center justify-center text-tiny font-semibold hover:text-accent-default ${
-																	selectedItemIndex === keys
+																	selectedItemIndex === index
 																		? "text-accent-default"
 																		: "text-black"
 																}`}

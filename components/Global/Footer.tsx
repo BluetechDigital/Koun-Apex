@@ -41,8 +41,8 @@ const Footer: FC = () => {
 							content={globalContext?.themesOptionsContent?.textarea}
 							tailwindStyling="max-w-full lg:max-w-md text-black text-tiny tracking-[0.05rem] leading-tight text-center lg:text-left"
 						/>
-						<div className="mt-2 flex flex-col">
-							<div className="grid grid-cols-2 lg:grid-cols-6 gap-4 items-center justify-center">
+						<div className="py-6 lg:pt-2 lg:pb-0 flex flex-col">
+							<div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 items-center justify-center">
 								{globalContext?.themesOptionsContent?.paymentMethods?.length >
 								0 ? (
 									globalContext?.themesOptionsContent?.paymentMethods?.map(

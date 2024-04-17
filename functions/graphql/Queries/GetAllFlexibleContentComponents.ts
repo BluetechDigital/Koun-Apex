@@ -44,7 +44,7 @@ export const getAllFlexibleContentComponents = async (
               										}
               									}
 												servicesLinks {
-													icon {
+													image {
 														altText
 														sourceUrl
 														mediaDetails {
@@ -151,6 +151,20 @@ export const getAllFlexibleContentComponents = async (
 													}
 												}
                 							}
+											... on ${postTypeFlexibleContent}_FeaturedBrand {
+												fieldGroupName
+												displaySection
+												brandsGrid {
+													image {
+														altText
+														sourceUrl
+														mediaDetails {
+															height
+															width
+														}
+													}
+												}
+											}
 											... on ${postTypeFlexibleContent}_Accreditations {
             									fieldGroupName
 												displaySection

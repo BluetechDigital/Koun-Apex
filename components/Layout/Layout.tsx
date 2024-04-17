@@ -14,7 +14,7 @@ const Layout: FC<ILayout> = ({children}) => {
 
 			<Navbar />
 
-			<div className="pt-[85px] lg:pt-[115px]">{children}</div>
+			<div className="pt-[110px] lg:pt-[115px]">{children}</div>
 
 			<Footer />
 		</>

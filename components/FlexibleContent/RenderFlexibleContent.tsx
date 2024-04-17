@@ -12,6 +12,7 @@ import FAQTwo from "../FAQTwo";
 import HeroTwo from "../HeroTwo";
 import ContactForm from "../ContactForm";
 import ErrorPage from "../Global/ErrorPage";
+import FeaturedBrand from "../FeaturedBrand";
 import TitleParagraph from "../TitleParagraph";
 import Accreditations from "../Accreditations";
 import Maintenance from "../Global/Maintenance";
@@ -37,6 +38,7 @@ const RenderFlexibleContent: FC = () => {
 		[`${FlexibleContent}_ContactForm`]: ContactForm,
 		[`${FlexibleContent}_Maintenance`]: Maintenance,
 		[`${FlexibleContent}_ErrorPageContent`]: ErrorPage,
+		[`${FlexibleContent}_FeaturedBrand`]: FeaturedBrand,
 		[`${FlexibleContent}_TitleParagraph`]: TitleParagraph,
 		[`${FlexibleContent}_Accreditations`]: Accreditations,
 		[`${FlexibleContent}_TestimonialsTwo`]: TestimonialsTwo,
