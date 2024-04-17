@@ -16,19 +16,20 @@ import styles from "@/styles/components/Footer.module.scss";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
+import RenderStars from "../Elements/RenderStars";
 
 const Footer: FC = () => {
 	const globalContext = useGlobalContext();
 
 	return (
-		<footer className={styles.footer + " p-0"}>
+		<footer className=" p-0">
 			<div className="lg:container mx-auto px-0 flex flex-col gap-8 py-4">
 				<div className="flex flex-col lg:flex-row items-center justify-between lg:items-start gap-4">
 					<motion.div
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className=""
+						className="px-4 lg:px-0"
 					>
 						<Link href="/" target="_self" aria-label="Koun Apex Website Link">
 							<Image
@@ -42,8 +43,54 @@ const Footer: FC = () => {
 						</Link>
 						<Paragraph
 							content={globalContext?.themesOptionsContent?.textarea}
-							tailwindStyling="max-w-full lg:max-w-md text-black text-base lg:text-paragraph tracking-[0.05rem] leading-tight text-center lg:text-left"
+							tailwindStyling="max-w-full lg:max-w-md text-black text-tiny tracking-[0.05rem] leading-tight text-center lg:text-left"
 						/>
+						<div className="mt-2 flex flex-col">
+							{/* <h3 className="mb-2 font-medium uppercase text-lg tracking-[0.05rem] font-schaboCondensed text-black">
+								Payment Methods
+							</h3> */}
+							<div className="grid grid-cols-2 lg:grid-cols-5 gap-4 items-center justify-center">
+								{globalContext?.themesOptionsContent?.paymentMethods?.length >
+								0 ? (
+									globalContext?.themesOptionsContent?.paymentMethods?.map(
+										(item: any, index: number) => (
+											<Fragment key={index}>
+												<motion.div
+													custom={index}
+													initial={initial}
+													whileInView="animate"
+													viewport={{once: true}}
+													variants={arrayLoopStaggerChildren}
+												>
+													<Image
+														priority
+														alt={`${item?.altText}`}
+														src={item?.sourceUrl}
+														width={
+															item?.mediaDetails?.width
+																? item?.mediaDetails?.width
+																: 500
+														}
+														height={
+															item?.mediaDetails?.height
+																? item?.mediaDetails?.height
+																: 500
+														}
+														className={
+															item?.sourceUrl
+																? `block object-contain object-center w-full h-5`
+																: `hidden`
+														}
+													/>
+												</motion.div>
+											</Fragment>
+										)
+									)
+								) : (
+									<></>
+								)}
+							</div>
+						</div>
 					</motion.div>
 					<div className="flex flex-col md:flex-row items-center justify-center lg:items-start lg:justify-end gap-6 xl:gap-20">
 						<motion.ul
@@ -55,10 +102,10 @@ const Footer: FC = () => {
 						>
 							{globalContext?.footerMenuLinks?.length > 0 ? (
 								globalContext?.footerMenuLinks?.map(
-									(item: any, keys: number) => (
-										<Fragment key={keys}>
+									(item: any, index: number) => (
+										<Fragment key={index}>
 											<motion.li
-												custom={keys}
+												custom={index}
 												initial={initial}
 												whileInView="animate"
 												viewport={{once: true}}
@@ -70,7 +117,7 @@ const Footer: FC = () => {
 														item?.node?.target ? item?.node?.target : "_self"
 													}`}
 													aria-label={`${item?.node?.label}`}
-													className="font-borexRegular uppercase text-black text-paragraph lg:text-xl xl:text-3xl tracking-[0.05rem] hover:text-accent-default transition-all duration-200 ease-in-out"
+													className="font-borexRegular uppercase text-black text-lg md:text-xl xl:text-3xl tracking-[0.05rem] hover:text-accent-default transition-all duration-200 ease-in-out"
 												>
 													{item?.node?.label}
 												</Link>
@@ -92,10 +139,10 @@ const Footer: FC = () => {
 							>
 								{globalContext?.copyrightLinks?.length > 0 ? (
 									globalContext?.copyrightLinks?.map(
-										(item: any, keys: number) => (
-											<Fragment key={keys}>
+										(item: any, index: number) => (
+											<Fragment key={index}>
 												<motion.li
-													custom={keys}
+													custom={index}
 													initial={initial}
 													whileInView="animate"
 													viewport={{once: true}}
@@ -107,7 +154,7 @@ const Footer: FC = () => {
 															item?.node?.target ? item?.node?.target : "_self"
 														}`}
 														aria-label={`${item?.node?.label}`}
-														className="font-schaboCondensed uppercase text-black text-paragraph lg:text-xl tracking-[0.05rem] hover:opacity-70 transition-all duration-200 ease-in-out"
+														className="font-schaboCondensed uppercase text-black text-lg lg:text-xl tracking-[0.05rem] leading-[0.5rem] hover:opacity-70 transition-all duration-200 ease-in-out"
 													>
 														{item?.node?.label}
 													</Link>
@@ -124,7 +171,7 @@ const Footer: FC = () => {
 				</div>
 			</div>
 			<div className="py-4 bg-primary-default">
-				<div className="lg:container mx-auto px-0 sm:flex items-center justify-between">
+				<div className="lg:container mx-auto px-0 flex flex-col-reverse md:flex-row items-center justify-between gap-6">
 					<div className="flex flex-col items-center justify-center lg:items-start">
 						<Paragraph
 							content={globalContext?.themesOptionsContent?.copyrightText}

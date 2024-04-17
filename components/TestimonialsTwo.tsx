@@ -123,8 +123,8 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({title, subtitle}) => {
 						{globalContext?.testimonials?.length > 0 ? (
 							globalContext?.testimonials
 								?.slice(0, 3)
-								?.map((item: any, keys: number) => (
-									<Fragment key={keys}>
+								?.map((item: any, index: number) => (
+									<Fragment key={index}>
 										<TestimonialsCard
 											name={item?.node?.testimonialReview?.name}
 											image={item?.node?.testimonialReview?.image}

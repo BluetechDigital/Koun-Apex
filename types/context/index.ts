@@ -124,6 +124,16 @@ export type IThemesOptionsContent = {
 		title: string;
 		target: string;
 	};
+	paymentMethods: [
+		{
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		}
+	];
 	displayNoticeBanner: boolean;
 	noticeBannerTextarea: string;
 };

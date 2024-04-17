@@ -39,6 +39,14 @@ export const getThemesOptionsContent = async () => {
 									title
 									target
 								}
+								paymentMethods {
+									altText
+									sourceUrl
+									mediaDetails {
+										height
+										width
+									}
+								}
 								displayNoticeBanner
 								noticeBannerTextarea
 							}

@@ -6,9 +6,6 @@ import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {initial, stagger} from "@/animations/animations";
 
-// Components
-import RenderStars from "../Elements/RenderStars";
-
 const NavbarContactInfoBanner: FC = () => {
 	const globalContext = useGlobalContext();
 
@@ -133,57 +130,35 @@ const NavbarContactInfoBanner: FC = () => {
 						</Link>
 					</div>
 				</div>
-				<div className="flex flex-row items-center gap-4">
+				<div className="flex flex-row items-center gap-2">
 					<motion.div
 						initial={initial}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 py-[1px] px-4 rounded-2xl grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center lg:justify-start gap-4"
+						className="w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 rounded-2xl grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center lg:justify-start gap-2"
 					>
-						<div className="flex items-center justify-center lg:justify-start gap-3">
-							<Image
-								className="my-auto lg:mx-0 rounded-full w-8 h-8 object-cover object-center"
-								alt={`Facebook reviews logo`}
-								src="/img/facebook-logo-blue-circle-large-white.webp"
-								width={500}
-								height={500}
-							/>
-							<div className="flex flex-col gap-1">
-								<div className="flex items-center justify-start gap-1">
-									<RenderStars rating={5} />
-								</div>
-								<h3 className="font-medium text-sm font-PlusJakartaSans text-black">
-									5.0 Rating
-								</h3>
-							</div>
-						</div>
-						<div className="flex items-center justify-center lg:justify-start gap-3">
-							<Image
-								className="bg-white my-auto lg:mx-0 rounded-full p-1 w-8 h-8 object-cover object-center"
-								alt={`Google reviews logo`}
-								src="/svg/google-tile-logo.svg"
-								width={500}
-								height={500}
-							/>
-							<div className="flex flex-col gap-1">
-								<div className="flex items-center justify-start gap-1">
-									<RenderStars rating={5} />
-								</div>
-								<h3 className="font-medium text-sm font-PlusJakartaSans text-black">
-									5.0 Rating
-								</h3>
-							</div>
-						</div>
-						<div className="flex items-center justify-center lg:justify-start gap-0 basis-1/2">
-							<Image
-								className="my-auto lg:mx-0 p-1 w-full h-9 object-cover object-center"
-								alt={`Trustpilot reviews logo`}
-								src="/svg/trustpilot-logo-black.svg"
-								width={500}
-								height={500}
-							/>
-						</div>
+						<Image
+							className="my-auto lg:mx-0 w-fit h-5 object-contain object-center"
+							alt={`Stripe logo`}
+							src="/svg/stripe-4.svg"
+							width={500}
+							height={500}
+						/>
+						<Image
+							className="my-auto lg:mx-0 w-fit h-4 object-contain object-center"
+							alt={`Visa logo`}
+							src="/svg/visa-10.svg"
+							width={500}
+							height={500}
+						/>
+						<Image
+							className="my-auto lg:mx-0 w-fit h-7 object-contain object-center"
+							alt={`Mastercard logo`}
+							src="/svg/Mastercard-logo.png"
+							width={500}
+							height={500}
+						/>
 					</motion.div>
 					<div className="flex flex-row items-center gap-2">
 						<h3 className="hidden lg:block font-medium uppercase text-lg tracking-[0.05rem] font-schaboCondensed text-black">
@@ -195,7 +170,7 @@ const NavbarContactInfoBanner: FC = () => {
 							target={globalContext?.themesOptionsContent?.facebookLink?.target}
 							className={
 								globalContext?.themesOptionsContent?.facebookLink?.url
-									? "inline-block px-1 hover:opacity-70 flex items-center justify-center w-8 h-8 rounded-full bg-primary-default"
+									? "px-1 hover:opacity-70 flex items-center justify-center w-8 h-8 rounded-full bg-primary-default"
 									: "hidden"
 							}
 						>
@@ -225,7 +200,7 @@ const NavbarContactInfoBanner: FC = () => {
 							target={globalContext?.themesOptionsContent?.twitterLink?.target}
 							className={
 								globalContext?.themesOptionsContent?.twitterLink?.url
-									? "inline-block px-1 hover:opacity-70 flex items-center justify-center w-8 h-8 rounded-full bg-primary-default"
+									? "px-1 hover:opacity-70 flex items-center justify-center w-8 h-8 rounded-full bg-primary-default"
 									: "hidden"
 							}
 						>
@@ -255,7 +230,7 @@ const NavbarContactInfoBanner: FC = () => {
 							target={globalContext?.themesOptionsContent?.linkedinLink?.target}
 							className={
 								globalContext?.themesOptionsContent?.linkedinLink?.url
-									? "inline-block px-1 hover:opacity-70 flex items-center justify-center w-8 h-8 rounded-full bg-primary-default"
+									? "px-1 hover:opacity-70 flex items-center justify-center w-8 h-8 rounded-full bg-primary-default"
 									: "hidden"
 							}
 						>
@@ -293,7 +268,7 @@ const NavbarContactInfoBanner: FC = () => {
 							}
 							className={
 								globalContext?.themesOptionsContent?.instagramLink?.url
-									? "inline-block px-1 hover:opacity-70 flex items-center justify-center w-8 h-8 rounded-full bg-primary-default"
+									? "px-1 hover:opacity-70 flex items-center justify-center w-8 h-8 rounded-full bg-primary-default"
 									: "hidden"
 							}
 						>

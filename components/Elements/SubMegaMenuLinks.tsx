@@ -37,8 +37,8 @@ const SubMegaMenuLinks: FC = () => {
 						{/* Menu Link*/}
 						{globalContext?.servicesSublinks?.length > 0 ? (
 							globalContext?.servicesSublinks?.map(
-								(item: any, keys: number) => (
-									<Fragment key={keys}>
+								(item: any, index: number) => (
+									<Fragment key={index}>
 										<Link
 											href={`${item?.node?.url}`}
 											target={`${

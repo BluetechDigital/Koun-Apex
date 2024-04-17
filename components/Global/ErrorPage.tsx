@@ -25,12 +25,7 @@ const ErrorPage: FC<IErrorPage> = ({
 		<section
 			className="relative h-[100vh] bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center"
 			style={{
-				backgroundImage: `linear-gradient(
-							0deg,
-							rgba(22, 22, 91, 0.85),
-							rgba(22, 22, 91, 0.85),
-							rgba(22, 22, 91, 0.85)
-						),url("${backgroundImage?.sourceUrl}")`,
+				backgroundImage: `url("${backgroundImage?.sourceUrl}")`,
 			}}
 		>
 			<div className="relative z-50 px-10 my-auto overflow-hidden py-44">
@@ -72,7 +67,7 @@ const ErrorPage: FC<IErrorPage> = ({
 								aria-label={`${buttonLink?.title}`}
 								className={buttonLink?.url ? "block" : "hidden"}
 							>
-								<div className="py-6 pl-4 pr-10 cursor-pointer bg-accent-default hover:bg-accent-default transition-all ease-in-out duration-500">
+								<div className="py-6 pl-4 pr-10 cursor-pointer bg-primary-default hover:bg-accent-dark transition-all ease-in-out duration-500">
 									<span className="relative flex items-center justify-center pl-4 text-lightGrey text-tiny text-center">
 										{buttonLink?.title}
 										<Image
@@ -90,7 +85,7 @@ const ErrorPage: FC<IErrorPage> = ({
 					</div>
 				</div>
 			</div>
-			<div className="absolute top-0 h-screen bottom-0 left-0 w-full opacity-90 bg-gradient-to-b from-primary-dark from-5% via-primary-dark via-10% to-primary-dark to-100%" />
+			<div className="absolute top-0 h-screen bottom-0 left-0 w-full opacity-90 bg-gradient-to-b from-primary-darker from-5% via-primary-darker via-10% to-primary-darker to-100%" />
 		</section>
 	);
 };

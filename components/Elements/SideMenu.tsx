@@ -30,7 +30,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 			<nav
 				className={` ${styles.nav} ${menuActive ? styles.navReveal : "hidden"}`}
 			>
-				<div className="relative flex flex-col w-full h-full px-6 py-6 overflow-x-hidden overflow-y-auto bg-white border-solid border-l-8 border-primary-default bg-cover bg-center bg-no-repeat">
+				<div className="relative flex flex-col w-full h-full px-6 py-6 overflow-x-hidden overflow-y-auto bg-white border-solid border-r-4 border-primary-default bg-cover bg-center bg-no-repeat">
 					<div className="flex items-center justify-between mb-8">
 						<Link
 							href="/"
@@ -64,8 +64,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 							viewport={{once: true}}
 						>
 							{globalContext?.mobileLinks.length > 0 ? (
-								globalContext?.mobileLinks.map((item: any, keys: number) => (
-									<Fragment key={keys}>
+								globalContext?.mobileLinks.map((item: any, index: number) => (
+									<Fragment key={index}>
 										{item?.node?.url === "/services" ? (
 											<li
 												onClick={displayOurServicesSublinks}
@@ -108,8 +108,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 															{/* Menu Link*/}
 															{globalContext?.servicesSublinks?.length > 0 ? (
 																globalContext?.servicesSublinks?.map(
-																	(item: any, keys: number) => (
-																		<Fragment key={keys}>
+																	(item: any, index: number) => (
+																		<Fragment key={index}>
 																			<Link
 																				href={`${item?.node?.url}`}
 																				target={`${

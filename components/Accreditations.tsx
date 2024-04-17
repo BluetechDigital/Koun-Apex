@@ -50,10 +50,10 @@ const Accreditations: FC<IAccreditations> = ({
 						className="grid grid-cols-2 gap-10 lg:grid-cols-3 py-0 lg:py-6 items-center justify-center"
 					>
 						{accreditationsGrid?.length > 0 ? (
-							accreditationsGrid?.map((item: any, keys: number) => (
-								<Fragment key={keys}>
+							accreditationsGrid?.map((item: any, index: number) => (
+								<Fragment key={index}>
 									<motion.div
-										custom={keys}
+										custom={index}
 										initial={initial}
 										whileInView="animate"
 										viewport={{once: true}}

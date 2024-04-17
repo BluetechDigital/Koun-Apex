@@ -36,6 +36,52 @@ const Navbar: FC = () => {
 		<>
 			<nav className={styles.navbar + ` z-[999] h-fit w-full fixed`}>
 				<NoticeInfoBanner />
+				<motion.div
+					initial={initial}
+					variants={stagger}
+					whileInView="animate"
+					viewport={{once: true}}
+					className="bg-lightGreyTwo md:hidden w-full max-w-lg lg:max-w-full mx-auto lg:mx-0 py-2 rounded-2xl flex items-center justify-center lg:justify-start gap-2"
+				>
+					{globalContext?.themesOptionsContent?.paymentMethods?.length > 0 ? (
+						globalContext?.themesOptionsContent?.paymentMethods?.map(
+							(item: any, index: number) => (
+								<Fragment key={index}>
+									<motion.div
+										custom={index}
+										initial={initial}
+										whileInView="animate"
+										viewport={{once: true}}
+										variants={arrayLoopStaggerChildren}
+									>
+										<Image
+											priority
+											alt={`${item?.altText}`}
+											src={item?.sourceUrl}
+											width={
+												item?.mediaDetails?.width
+													? item?.mediaDetails?.width
+													: 500
+											}
+											height={
+												item?.mediaDetails?.height
+													? item?.mediaDetails?.height
+													: 500
+											}
+											className={
+												item?.sourceUrl
+													? `block object-contain object-center w-full h-5 `
+													: `hidden`
+											}
+										/>
+									</motion.div>
+								</Fragment>
+							)
+						)
+					) : (
+						<></>
+					)}
+				</motion.div>
 				<NavbarContactInfoBanner />
 				<div className="bg-white flex items-center justify-between gap-2 px-4 lg:px-6">
 					<div className="flex items-center justify-center">
@@ -66,54 +112,125 @@ const Navbar: FC = () => {
 						</Link>
 					</div>
 					<div className="flex items-center justify-center gap-4">
-						<Link href="/cart" target="_self" aria-label="Shopping Cart Logo">
+						<motion.div
+							initial={initial}
+							variants={stagger}
+							whileInView="animate"
+							viewport={{once: true}}
+							className="hidden w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 py-[1px] px-4 rounded-2xl md:grid sm:grid-cols-3 items-center justify-center lg:justify-start gap-4"
+						>
+							<div className="flex items-center justify-center lg:justify-start gap-3">
+								<Image
+									className="my-auto lg:mx-0 rounded-full w-8 h-8 object-cover object-center"
+									alt={`Facebook reviews logo`}
+									src="/img/facebook-logo-blue-circle-large-white.webp"
+									width={500}
+									height={500}
+								/>
+								<div className="flex flex-col gap-1">
+									<div className="flex items-center justify-start gap-1">
+										<RenderStars rating={5} />
+									</div>
+									<h3 className="font-medium text-sm font-PlusJakartaSans text-black">
+										5.0 Rating
+									</h3>
+								</div>
+							</div>
+							<div className="flex items-center justify-center lg:justify-start gap-3">
+								<Image
+									className="bg-white my-auto lg:mx-0 rounded-full p-1 w-8 h-8 object-cover object-center"
+									alt={`Google reviews logo`}
+									src="/svg/google-tile-logo.svg"
+									width={500}
+									height={500}
+								/>
+								<div className="flex flex-col gap-1">
+									<div className="flex items-center justify-start gap-1">
+										<RenderStars rating={5} />
+									</div>
+									<h3 className="font-medium text-sm font-PlusJakartaSans text-black">
+										5.0 Rating
+									</h3>
+								</div>
+							</div>
+							<div className="flex items-center justify-center lg:justify-start gap-0 basis-1/2">
+								<Image
+									className="my-auto lg:mx-0 p-1 w-full h-9 object-cover object-center"
+									alt={`Trustpilot reviews logo`}
+									src="/svg/trustpilot-logo-black.svg"
+									width={500}
+									height={500}
+								/>
+							</div>
+						</motion.div>
+						<Link
+							href="/cart"
+							target="_self"
+							aria-label="Shopping Cart Logo"
+							className="py-0 px-2 bg-primary-default"
+						>
 							<Image
 								priority
 								width={500}
 								height={500}
 								alt="Shopping Cart Logo"
-								src="/svg/1029 - Shopping Cart.svg"
+								src="/svg/e-commerce/1029 - Shopping Cart.svg"
 								className="object-contain object-center w-full h-16 hover:opacity-70 transition-all duration-200 ease-in-out"
 							/>
 						</Link>
 					</div>
 				</div>
-				<div className="py-2 bg-primary-default">
-					<motion.ul
-						initial={initial}
-						variants={stagger}
-						whileInView="animate"
-						viewport={{once: true}}
-						className="flex w-auto gap-0 p-0 items-center justify-center lg:items-start gap-6"
-					>
-						{globalContext?.navbarMenuLinks?.length > 0 ? (
-							globalContext?.navbarMenuLinks?.map((item: any, keys: number) => (
-								<Fragment key={keys}>
-									<motion.li
-										custom={keys}
-										initial={initial}
-										whileInView="animate"
-										viewport={{once: true}}
-										variants={arrayLoopStaggerChildren}
-									>
-										<Link
-											href={`${item?.node?.url}`}
-											target={`${
-												item?.node?.target ? item?.node?.target : "_self"
-											}`}
-											aria-label={`${item?.node?.label}`}
-											className="font-borexRegular uppercase text-white text-paragraph tracking-[0.05rem] hover:opacity-70 transition-all duration-200 ease-in-out"
-										>
-											{item?.node?.label}
-										</Link>
-									</motion.li>
-								</Fragment>
-							))
-						) : (
-							<></>
-						)}
-					</motion.ul>
-				</div>
+				<motion.div
+					initial={initial}
+					variants={stagger}
+					whileInView="animate"
+					viewport={{once: true}}
+					className="bg-white md:hidden w-full px-4 py-2 grid sm:grid-cols-3 items-center justify-center lg:justify-start gap-4"
+				>
+					<div className="flex items-center justify-center lg:justify-start gap-3">
+						<Image
+							className="my-auto lg:mx-0 rounded-full w-8 h-8 object-cover object-center"
+							alt={`Facebook reviews logo`}
+							src="/img/facebook-logo-blue-circle-large-white.webp"
+							width={500}
+							height={500}
+						/>
+						<div className="flex flex-col gap-1">
+							<div className="flex items-center justify-start gap-1">
+								<RenderStars rating={5} />
+							</div>
+							<h3 className="font-medium text-sm font-PlusJakartaSans text-black">
+								5.0 Rating
+							</h3>
+						</div>
+					</div>
+					<div className="flex items-center justify-center lg:justify-start gap-3">
+						<Image
+							className="bg-white my-auto lg:mx-0 rounded-full p-1 w-8 h-8 object-cover object-center"
+							alt={`Google reviews logo`}
+							src="/svg/google-tile-logo.svg"
+							width={500}
+							height={500}
+						/>
+						<div className="flex flex-col gap-1">
+							<div className="flex items-center justify-start gap-1">
+								<RenderStars rating={5} />
+							</div>
+							<h3 className="font-medium text-sm font-PlusJakartaSans text-black">
+								5.0 Rating
+							</h3>
+						</div>
+					</div>
+					<div className="flex items-center justify-center lg:justify-start gap-0 basis-1/2">
+						<Image
+							className="my-auto lg:mx-0 p-1 w-full h-9 object-cover object-center"
+							alt={`Trustpilot reviews logo`}
+							src="/svg/trustpilot-logo-black.svg"
+							width={500}
+							height={500}
+						/>
+					</div>
+				</motion.div>
 
 				{/* Hidden Tablet & Mobile  Side Menu */}
 				<div className={menuActive ? "flex flex-col xl:block" : "hidden"}>

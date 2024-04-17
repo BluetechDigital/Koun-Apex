@@ -83,10 +83,10 @@ const Faq: FC<IFaq> = ({title, subtitle, paragraph, faqGrid}) => {
 											className="flex flex-col sm:items-baseline items-center justify-center"
 										>
 											{faqGrid?.length > 0 ? (
-												faqGrid?.map((item: any, keys: number) => (
-													<Fragment key={keys}>
+												faqGrid?.map((item: any, index: number) => (
+													<Fragment key={index}>
 														<motion.li
-															custom={keys}
+															custom={index}
 															initial={initial}
 															whileInView="animate"
 															viewport={{once: true}}
