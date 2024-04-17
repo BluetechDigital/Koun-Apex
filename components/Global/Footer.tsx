@@ -11,12 +11,8 @@ import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 
-// Styling
-import styles from "@/styles/components/Footer.module.scss";
-
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
-import RenderStars from "../Elements/RenderStars";
 
 const Footer: FC = () => {
 	const globalContext = useGlobalContext();
@@ -46,10 +42,7 @@ const Footer: FC = () => {
 							tailwindStyling="max-w-full lg:max-w-md text-black text-tiny tracking-[0.05rem] leading-tight text-center lg:text-left"
 						/>
 						<div className="mt-2 flex flex-col">
-							{/* <h3 className="mb-2 font-medium uppercase text-lg tracking-[0.05rem] font-schaboCondensed text-black">
-								Payment Methods
-							</h3> */}
-							<div className="grid grid-cols-2 lg:grid-cols-5 gap-4 items-center justify-center">
+							<div className="grid grid-cols-2 lg:grid-cols-6 gap-4 items-center justify-center">
 								{globalContext?.themesOptionsContent?.paymentMethods?.length >
 								0 ? (
 									globalContext?.themesOptionsContent?.paymentMethods?.map(

@@ -97,12 +97,9 @@ const Navbar: FC = () => {
 								globalContext?.themesOptionsContent?.displayNoticeBanner
 									? "top-[62.5px]"
 									: "top-[20px]"
-							} w-[50px] h-[50px] cursor-pointer group flex flex-col items-center justify-center transition-all duration-200 ease-in-out`}
+							} w-fit h-full cursor-pointer group flex flex-col items-center justify-center transition-all duration-200 ease-in-out`}
 						>
-							<span className="line line1" aria-hidden="true"></span>
-							<span className="line line2" aria-hidden="true"></span>
-							<span className="line line3" aria-hidden="true"></span>
-							<span className="font-schaboCondensed text-lg text-center text-primary-default group-hover:text-white uppercase">
+							<span className="mt-[2px] font-schaboCondensed text-lg text-center tracking-[0.05rem] text-white uppercase">
 								Menu
 							</span>
 						</motion.button>
@@ -239,9 +236,9 @@ const Navbar: FC = () => {
 				</motion.div>
 
 				{/* Hidden Tablet & Mobile  Side Menu */}
-				{/* <div className={menuActive ? "flex flex-col xl:block" : "hidden"}>
+				<div className={menuActive ? "flex flex-col xl:block" : "hidden"}>
 					<SideMenu menuActive={menuActive} setMenuActive={setMenuActive} />
-				</div> */}
+				</div>
 			</nav>
 		</>
 	);
