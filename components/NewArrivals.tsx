@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
+import {useGlobalContext} from "@/context/global";
 import {INewArrivals} from "@/types/components/index";
 
 // Components
@@ -22,8 +23,8 @@ const NewArrivals: FC<INewArrivals> = ({
 	subtitle,
 	paragraph,
 	buttonLink,
-	newArrivalsGrid,
 }) => {
+	const globalContext = useGlobalContext();
 	return (
 		<>
 			<div
@@ -33,7 +34,7 @@ const NewArrivals: FC<INewArrivals> = ({
 				}}
 			>
 				<div className="lg:container px-4 mx-auto">
-					<div className="mb-10 flex flex-col lg:flex-row items-center justify-between">
+					<div className="mb-2 flex flex-col lg:flex-row items-center justify-between">
 						<motion.div
 							viewport={{once: true}}
 							initial={slideInLeftInitial}
@@ -77,26 +78,28 @@ const NewArrivals: FC<INewArrivals> = ({
 						</motion.div>
 					</div>
 					<div className="grid items-start justify-center grid-cols-2 gap-4 px-4 sm:items-center sm:-mb-8 sm:gap-10 sm:-mx-4 lg:grid-cols-3 xl:grid-cols-4 lg:justify-between xl:-mx-8">
-						{newArrivalsGrid?.length > 0 ? (
-							newArrivalsGrid?.map((item: any, index: any) => (
-								<Fragment key={index}>
-									<motion.div
-										custom={index}
-										initial={initial}
-										whileInView="animate"
-										viewport={{once: true}}
-										variants={arrayLoopStaggerChildren}
-										className="w-full"
-									>
-										<NewArrivalsCard
-											key={index}
-											link={item?.link}
-											title={item?.title}
-											image={item?.image}
-										/>
-									</motion.div>
-								</Fragment>
-							))
+						{globalContext?.wooCommerceProducts?.length > 0 ? (
+							globalContext?.wooCommerceProducts?.map(
+								(item: any, index: any) => (
+									<Fragment key={index}>
+										<motion.div
+											custom={index}
+											initial={initial}
+											whileInView="animate"
+											viewport={{once: true}}
+											variants={arrayLoopStaggerChildren}
+											className="w-full"
+										>
+											<NewArrivalsCard
+												slug={item?.slug}
+												name={item?.name}
+												images={item?.images}
+												price={item?.regular_price}
+											/>
+										</motion.div>
+									</Fragment>
+								)
+							)
 						) : (
 							<></>
 						)}

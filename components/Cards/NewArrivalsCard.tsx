@@ -6,13 +6,13 @@ import {motion} from "framer-motion";
 import {INewArrivalsCard} from "@/types/components/index";
 import {fadeInUp, initial} from "@/animations/animations";
 
-const NewArrivalsCard: FC<INewArrivalsCard> = ({title, link, image}) => {
+const NewArrivalsCard: FC<INewArrivalsCard> = ({name, slug, price, images}) => {
 	return (
 		<>
 			<Link
-				aria-label={`${link?.title}`}
-				href={link?.url ? link?.url : `/`}
-				target={`${link?.target ? link?.target : "_self"}`}
+				aria-label={`${name}`}
+				href={slug ? `/store/products/${slug}` : `/`}
+				target={`${slug ? slug : "_self"}`}
 			>
 				<motion.div
 					initial={initial}
@@ -22,28 +22,32 @@ const NewArrivalsCard: FC<INewArrivalsCard> = ({title, link, image}) => {
 				>
 					<Image
 						priority
-						alt={`${image?.altText}`}
-						src={image?.sourceUrl}
-						width={
-							image?.mediaDetails?.width ? image?.mediaDetails?.width : 500
-						}
-						height={
-							image?.mediaDetails?.height ? image?.mediaDetails?.height : 500
-						}
+						alt={`${images[0]?.name}`}
+						src={images[0]?.src}
+						width={500}
+						height={500}
 						className={
-							image?.sourceUrl
+							images[0]?.src
 								? `block w-full mb-7 transition-transform duration-500 transform h-full min-h-[200px] sm:min-h-[350px] max-h-[350px] group-hover:scale-102 object-cover object center`
 								: `hidden`
 						}
 					/>
 				</motion.div>
+				<motion.h3
+					initial={initial}
+					whileInView={fadeInUp}
+					viewport={{once: true}}
+					className="text-base font-PlusJakartaSans tracking-widest text-center text-white"
+				>
+					{name}
+				</motion.h3>
 				<motion.h4
 					initial={initial}
 					whileInView={fadeInUp}
 					viewport={{once: true}}
-					className="text-base font-bold tracking-widest text-center sm:text-left text-goldPrime"
+					className="text-paragraph font-PlusJakartaSans tracking-widest text-center text-white"
 				>
-					{title}
+					{`$${price}`}
 				</motion.h4>
 			</Link>
 		</>

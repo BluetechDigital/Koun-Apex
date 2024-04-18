@@ -181,24 +181,6 @@ export type INewArrivals = {
 		title: string;
 		target: string;
 	};
-	newArrivalsGrid: [
-		{
-			title: string;
-			link: {
-				url: string;
-				title: string;
-				target: string;
-			};
-			image: {
-				altText: string;
-				sourceUrl: string;
-				mediaDetails: {
-					width: number;
-					height: number;
-				};
-			};
-		}
-	];
 };
 export type IFeaturedBrand = {
 	brandsGrid: [
@@ -343,20 +325,15 @@ export type IFAQCard = {
 	paragraph: string;
 };
 export type INewArrivalsCard = {
-	title: string;
-	link: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	image: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			width: number;
-			height: number;
-		};
-	};
+	name: string;
+	slug: string;
+	price: string;
+	images: [
+		{
+			src: string;
+			name: string;
+		}
+	];
 };
 export type ITestimonialsCard = {
 	name: string;

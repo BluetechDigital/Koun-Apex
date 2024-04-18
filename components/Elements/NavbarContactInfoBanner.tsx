@@ -208,11 +208,11 @@ const NavbarContactInfoBanner: FC = () => {
 								xmlns="http://www.w3.org/2000/svg"
 								fill="#ffffff000"
 							>
-								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
 								<g
 									id="SVGRepo_tracerCarrier"
-									stroke-linecap="round"
-									stroke-linejoin="round"
+									strokeLinecap="round"
+									strokeLinejoin="round"
 								></g>
 								<g id="SVGRepo_iconCarrier">
 									{" "}
@@ -221,9 +221,9 @@ const NavbarContactInfoBanner: FC = () => {
 									<g
 										id="Page-1"
 										stroke="none"
-										stroke-width="1"
+										strokeWidth="1"
 										fill="none"
-										fill-rule="evenodd"
+										fillRule="evenodd"
 									>
 										{" "}
 										<g
@@ -275,11 +275,11 @@ const NavbarContactInfoBanner: FC = () => {
 								viewBox="0 0 1024 1024"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
 								<g
 									id="SVGRepo_tracerCarrier"
-									stroke-linecap="round"
-									stroke-linejoin="round"
+									strokeLinecap="round"
+									strokeLinejoin="round"
 								></g>
 								<g id="SVGRepo_iconCarrier">
 									<path
