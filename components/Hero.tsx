@@ -1,8 +1,6 @@
 // Imports
 import {
-	fadeIn,
 	initial,
-	initialTwo,
 	slideInLeftInitial,
 	slideInRightFinish,
 	slideInRightInitial,
@@ -18,8 +16,8 @@ import {IHero} from "@/types/components/index";
 import styles from "../styles/components/Hero.module.scss";
 
 // Components
-import Title from "./Elements/Title";
 import Paragraph from "./Elements/Paragraph";
+import ServicesLinksCard from "./Cards/ServicesLinksCard";
 
 const Hero: FC<IHero> = ({
 	title,
@@ -137,21 +135,7 @@ const Hero: FC<IHero> = ({
 											),url("${item?.image?.sourceUrl}")`,
 										}}
 									>
-										<Link
-											key={index}
-											href={`${item?.buttonLink?.url}`}
-											target={item?.buttonLink?.target}
-											aria-label={`${item?.buttonLink?.title}`}
-										>
-											<div
-												className={`p-2 bg-transparent hover:bg-accent-default w-full h-ful min-h-[20vh] flex items-center justify-center flex flex-col gap-4 items-center justify-center transition-all ease-in-out duration-500`}
-											>
-												<Title
-													content={item?.buttonLink?.title}
-													tailwindStyling="py-1 px-4 font-borexRegular tracking-[0.05rem] uppercase text-white text-lg lg:text-xl leading-tight text-center"
-												/>
-											</div>
-										</Link>
+										<ServicesLinksCard buttonLink={item?.buttonLink} />
 									</motion.li>
 									<motion.li
 										custom={index}
@@ -169,21 +153,7 @@ const Hero: FC<IHero> = ({
 											),url("${item?.image?.sourceUrl}")`,
 										}}
 									>
-										<Link
-											key={index}
-											href={`${item?.buttonLink?.url}`}
-											target={item?.buttonLink?.target}
-											aria-label={`${item?.buttonLink?.title}`}
-										>
-											<div
-												className={`p-2 bg-transparent hover:bg-accent-default w-full h-ful min-h-[20vh] flex items-center justify-center flex flex-col gap-4 items-center justify-center transition-all ease-in-out duration-500`}
-											>
-												<Title
-													content={item?.buttonLink?.title}
-													tailwindStyling="py-1 px-4 font-borexRegular tracking-[0.05rem] uppercase text-white text-lg lg:text-xl leading-tight text-center"
-												/>
-											</div>
-										</Link>
+										<ServicesLinksCard buttonLink={item?.buttonLink} />
 									</motion.li>
 								</Fragment>
 							))

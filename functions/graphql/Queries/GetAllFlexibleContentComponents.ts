@@ -165,6 +165,18 @@ export const getAllFlexibleContentComponents = async (
 													}
 												}
 											}
+											... on ${postTypeFlexibleContent}_NewArrivals {
+												fieldGroupName
+												displaySection
+												subtitle
+												title
+												paragraph
+												buttonLink {
+													url
+													title
+													target
+												}
+											}
 											... on ${postTypeFlexibleContent}_Accreditations {
             									fieldGroupName
 												displaySection

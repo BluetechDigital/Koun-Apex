@@ -211,7 +211,7 @@ const Navbar: FC = () => {
 					</div>
 				</motion.div>
 				<NavbarContactInfoBanner />
-				<div className="bg-white w-full flex lg:grid grid-cols-3 gap-5 items-center justify-between gap-2 px-4 lg:px-6">
+				<div className="bg-white w-full flex lg:grid grid-cols-3 gap-5 items-center justify-between px-4 lg:px-6">
 					<div className="flex items-center justify-start">
 						<motion.button
 							initial={initial}

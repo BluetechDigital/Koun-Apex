@@ -172,6 +172,34 @@ export type IMaintenance = {
 		};
 	};
 };
+export type INewArrivals = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	newArrivalsGrid: [
+		{
+			title: string;
+			link: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
 export type IFeaturedBrand = {
 	brandsGrid: [
 		{
@@ -314,6 +342,22 @@ export type IFAQCard = {
 	title: string;
 	paragraph: string;
 };
+export type INewArrivalsCard = {
+	title: string;
+	link: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+};
 export type ITestimonialsCard = {
 	name: string;
 	position: string;
@@ -326,6 +370,13 @@ export type ITestimonialsCard = {
 			width: number;
 			height: number;
 		};
+	};
+};
+export type IServicesLinksCard = {
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
 	};
 };
 export type ITitleContentImageCard = {
