@@ -23,7 +23,7 @@ const FAQTwo: FC<IFAQTwo> = ({
 	image,
 	subtitle,
 	paragraph,
-	faqContent,
+	faqGrid,
 	buttonLink,
 }) => {
 	return (
@@ -70,11 +70,11 @@ const FAQTwo: FC<IFAQTwo> = ({
 								image?.sourceUrl ? "lg:w-1/2" : `w-full`
 							}`}
 						>
-							{faqContent?.length > 0 ? (
-								faqContent.map((item: any, index: number) => (
+							{faqGrid?.length > 0 ? (
+								faqGrid.map((item: any, index: number) => (
 									<Fragment key={index}>
 										<FAQCard
-											index={keys}
+											index={index}
 											title={item?.card?.title}
 											paragraph={item?.card?.paragraph}
 										/>

@@ -17,6 +17,8 @@ import Paragraph from "@/components/Elements/Paragraph";
 const Footer: FC = () => {
 	const globalContext = useGlobalContext();
 
+	console.log(globalContext?.themesOptionsContent?.store?.title);
+
 	return (
 		<footer className=" p-0">
 			<div className="lg:container mx-auto px-0 flex flex-col gap-8 py-4">

@@ -26,7 +26,7 @@ const TitleParagraph: FC<ITitleParagraph> = ({
 					viewport={{once: true}}
 					className={
 						title
-							? "font-borexRegular my-3 max-w-xl mx-auto uppercase text-black text-center font-extrabold text-lg lg:text-xl"
+							? "font-borexRegular my-3 max-w-xl mx-auto uppercase text-black text-center text-lg lg:text-xl"
 							: "hidden"
 					}
 				>

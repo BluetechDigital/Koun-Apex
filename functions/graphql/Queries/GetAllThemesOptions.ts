@@ -48,6 +48,20 @@ export const getThemesOptionsContent = async () => {
 										width
 									}
 								}
+								store {
+									title
+									subtitle
+									heroTitle
+									paragraph
+									heroImage {
+										altText
+										sourceUrl
+										mediaDetails {
+											height
+											width
+										}
+									}
+								}
 								displayNoticeBanner
 								noticeBannerTextarea
 							}

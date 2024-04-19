@@ -80,13 +80,6 @@ export const getAllFlexibleContentComponents = async (
 												subtitle
 												paragraph
 											}
-											... on ${postTypeFlexibleContent}_StoreTwo {
-												fieldGroupName
-												displaySection
-												title
-												subtitle
-												paragraph
-											}
 											... on ${postTypeFlexibleContent}_TitleParagraph {
 												fieldGroupName
 												title

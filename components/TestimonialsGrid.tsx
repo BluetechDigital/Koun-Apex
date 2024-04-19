@@ -23,12 +23,8 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 		<>
 			<div
 				className={
-					styles.testimonials +
-					` relative py-16 lg:py-28 px-4 bg-white bg-cover bg-no-repeat bg-center`
+					styles.testimonials + ` relative py-16 lg:py-28 px-4 bg-white`
 				}
-				style={{
-					backgroundImage: `url("/svg/background/layeblue-peaks-haikei-white-lightgrey.svg")`,
-				}}
 			>
 				<div className="lg:container relative m-auto flex flex-col items-center gap-6 sm:gap-12 lg:gap-20">
 					<motion.div

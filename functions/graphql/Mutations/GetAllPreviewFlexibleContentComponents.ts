@@ -47,7 +47,7 @@ export const getAllPreviewFlexibleContentComponents = async (
               										}
               									}
 												servicesLinks {
-													icon {
+													image {
 														altText
 														sourceUrl
 														mediaDetails {
@@ -77,13 +77,6 @@ export const getAllPreviewFlexibleContentComponents = async (
 												}
 											}
 											... on ${postTypeFlexibleContent}_Store {
-												fieldGroupName
-												displaySection
-												title
-												subtitle
-												paragraph
-											}
-											... on ${postTypeFlexibleContent}_StoreTwo {
 												fieldGroupName
 												displaySection
 												title
@@ -154,6 +147,32 @@ export const getAllPreviewFlexibleContentComponents = async (
 													}
 												}
                 							}
+											... on ${postTypeFlexibleContent}_FeaturedBrand {
+												fieldGroupName
+												displaySection
+												brandsGrid {
+													image {
+														altText
+														sourceUrl
+														mediaDetails {
+															height
+															width
+														}
+													}
+												}
+											}
+											... on ${postTypeFlexibleContent}_NewArrivals {
+												fieldGroupName
+												displaySection
+												subtitle
+												title
+												paragraph
+												buttonLink {
+													url
+													title
+													target
+												}
+											}
 											... on ${postTypeFlexibleContent}_Accreditations {
             									fieldGroupName
 												displaySection

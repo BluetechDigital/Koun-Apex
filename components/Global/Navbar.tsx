@@ -6,6 +6,8 @@ import {
 	stagger,
 	fadeInUp,
 	arrayLoopStaggerChildren,
+	slideInLeftInitial,
+	slideInRightFinish,
 } from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
@@ -57,16 +59,23 @@ const Navbar: FC = () => {
 								Menu
 							</span>
 						</motion.button>
-						<Link href="/" target="_self" aria-label="Koun Apex Website Link">
-							<Image
-								priority
-								width={500}
-								height={500}
-								alt="KounApex Logo"
-								src="/img/logos/Koun-Apex-Logo-Two.png"
-								className="object-contain object-center w-full h-[75px]"
-							/>
-						</Link>
+						<motion.button
+							initial={initial}
+							whileInView={fadeInUp}
+							viewport={{once: true}}
+							className=""
+						>
+							<Link href="/" target="_self" aria-label="Koun Apex Website Link">
+								<Image
+									priority
+									width={500}
+									height={500}
+									alt="KounApex Logo"
+									src="/img/logos/Koun-Apex-Logo-Two.png"
+									className="object-contain object-center w-full h-[75px]"
+								/>
+							</Link>
+						</motion.button>
 					</div>
 					<motion.ul
 						initial={initial}

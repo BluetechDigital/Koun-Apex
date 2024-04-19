@@ -1,24 +1,26 @@
 // Imports
 import {IPageContext} from "@/types/context";
 import {GetStaticProps, NextPage} from "next";
-import {flexibleContentType, postType} from "@/context/pages";
+import {flexibleContentType, postType, storePage} from "@/context/pages";
+import {useGlobalContext} from "@/context/global";
 
 // Queries Functions
 import {getAllSeoContent} from "@/functions/graphql/Queries/GetAllSeoContent";
-import {getAllPagesSlugs} from "@/functions/graphql/Queries/GetAllPagesSlugs";
 import {getAllFlexibleContentComponents} from "@/functions/graphql/Queries/GetAllFlexibleContentComponents";
 
 // Components
 import Layout from "@/components/Layout/Layout";
+import Store from "@/components/Commerce/Store";
 import BackToTopButton from "@/components/Elements/BackToTopButton";
 import PageContextProvider from "@/components/Context/PageContextProvider";
-import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
 
-const dynamicPages: NextPage<IPageContext> = ({
+const StorePage: NextPage<IPageContext> = ({
 	seo,
 	content,
 	postTypeFlexibleContent,
 }) => {
+	const globalContext = useGlobalContext();
+
 	return (
 		<>
 			<PageContextProvider
@@ -27,31 +29,26 @@ const dynamicPages: NextPage<IPageContext> = ({
 				postTypeFlexibleContent={postTypeFlexibleContent}
 			>
 				<Layout>
+					<Store
+						title={globalContext?.themesOptionsContent?.store?.title}
+						subtitle={globalContext?.themesOptionsContent?.store?.subtitle}
+						heroTitle={globalContext?.themesOptionsContent?.store?.heroTitle}
+						paragraph={globalContext?.themesOptionsContent?.store?.paragraph}
+						heroImage={globalContext?.themesOptionsContent?.store?.heroImage}
+					/>
 					<BackToTopButton link={`#`} />
-					<RenderFlexibleContent />
 				</Layout>
 			</PageContextProvider>
 		</>
 	);
 };
 
-export async function getStaticPaths() {
-	const data = await getAllPagesSlugs();
-	const paths = data.map((item) => ({
-		params: {
-			slug: item?.slug as String,
-		},
-	}));
-
-	return {paths, fallback: false};
-}
-
-export const getStaticProps: GetStaticProps = async ({params}: any) => {
+export const getStaticProps: GetStaticProps = async () => {
 	// Fetch priority content
-	const seoContent: any = await getAllSeoContent(params?.slug, postType?.pages);
+	const seoContent: any = await getAllSeoContent(storePage, postType?.pages);
 
 	const flexibleContentComponents: any = await getAllFlexibleContentComponents(
-		params?.slug,
+		storePage,
 		postType?.pages,
 		flexibleContentType?.pages
 	);
@@ -66,4 +63,4 @@ export const getStaticProps: GetStaticProps = async ({params}: any) => {
 	};
 };
 
-export default dynamicPages;
+export default StorePage;

@@ -69,11 +69,6 @@ export type IHero = {
 		}
 	];
 };
-export type IStore = {
-	title: string;
-	subtitle: string;
-	paragraph: string;
-};
 export type ICTATwo = {
 	title: string;
 	highlightText: string;
@@ -397,3 +392,35 @@ export type IButtonBorderSliced = {
 	fullWidth: boolean;
 	tailwindColor: string;
 };
+
+/* Store E-Commerce Components */
+export namespace IStore {
+	export type IStore = {
+		title: string;
+		heroTitle: string;
+		subtitle: string;
+		paragraph: string;
+		heroImage: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+
+	// Cards
+	export type IProductListCard = {
+		name: string;
+		slug: string;
+		price: string;
+		description: string;
+		images: [
+			{
+				src: string;
+				name: string;
+			}
+		];
+	};
+}

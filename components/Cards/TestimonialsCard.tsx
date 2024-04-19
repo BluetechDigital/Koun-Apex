@@ -11,7 +11,6 @@ import Paragraph from "@/components/Elements/Paragraph";
 const TestimonialsCard: FC<ITestimonialsCard> = ({
 	name,
 	image,
-	rating,
 	position,
 	paragraph,
 }) => {

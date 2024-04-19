@@ -79,8 +79,9 @@ const NewArrivals: FC<INewArrivals> = ({
 					</div>
 					<div className="grid items-start justify-center grid-cols-2 gap-4 px-4 sm:items-center sm:-mb-8 sm:gap-10 sm:-mx-4 lg:grid-cols-3 xl:grid-cols-5 lg:justify-between xl:-mx-8">
 						{globalContext?.wooCommerceProducts?.length > 0 ? (
-							globalContext?.wooCommerceProducts?.map(
-								(item: any, index: any) => (
+							globalContext?.wooCommerceProducts
+								?.slice(0, 5)
+								?.map((item: any, index: any) => (
 									<Fragment key={index}>
 										<motion.div
 											custom={index}
@@ -98,8 +99,7 @@ const NewArrivals: FC<INewArrivals> = ({
 											/>
 										</motion.div>
 									</Fragment>
-								)
-							)
+								))
 						) : (
 							<></>
 						)}

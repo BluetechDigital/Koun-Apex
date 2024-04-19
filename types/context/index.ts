@@ -37,7 +37,6 @@ export type IPostTypes = {
 	posts: string;
 	previewPage: string;
 	previewPost: string;
-	caseStudies: string;
 	testimonials: string;
 };
 export type IMobileLinks = [
@@ -134,6 +133,20 @@ export type IThemesOptionsContent = {
 			};
 		}
 	];
+	store: {
+		title: string;
+		heroTitle: string;
+		subtitle: string;
+		paragraph: string;
+		heroImage: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
 	displayNoticeBanner: boolean;
 	noticeBannerTextarea: string;
 };

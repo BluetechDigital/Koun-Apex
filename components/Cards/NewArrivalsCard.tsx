@@ -28,7 +28,7 @@ const NewArrivalsCard: FC<INewArrivalsCard> = ({name, slug, price, images}) => {
 						height={500}
 						className={
 							images[0]?.src
-								? `block w-full h-[300px] mb-7 transition-transform duration-500 transform  group-hover:scale-102 object-contain object center`
+								? `block w-full lg:h-[225px] 2xl:h-[300px] mb-7 transition-transform duration-500 transform  group-hover:scale-102 object-contain object center`
 								: `hidden`
 						}
 					/>
