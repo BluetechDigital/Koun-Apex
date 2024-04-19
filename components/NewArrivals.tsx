@@ -45,7 +45,7 @@ const NewArrivals: FC<INewArrivals> = ({
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="font-schaboCondensed uppercase text-primary-default text-xl text-center lg:text-left tracking-[0.05rem]"
+								className="font-schaboCondensed uppercase text-primary-default text-2xl text-center lg:text-left tracking-[0.05rem]"
 							>
 								{subtitle}
 							</motion.span>
@@ -53,7 +53,7 @@ const NewArrivals: FC<INewArrivals> = ({
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="max-w-2xl mt-2 text-white font-borexRegular uppercase text-lg xl:text-xl text-center lg:text-left tracking-[0.05rem]"
+								className="max-w-2xl mt-2 text-white font-borexRegular uppercase leading-tight text-lg lg:text-xl xl:text-3xl text-center lg:text-left tracking-[0.05rem]"
 							>
 								{title}
 							</motion.h2>
@@ -77,7 +77,7 @@ const NewArrivals: FC<INewArrivals> = ({
 							</Link>
 						</motion.div>
 					</div>
-					<div className="grid items-start justify-center grid-cols-2 gap-4 px-4 sm:items-center sm:-mb-8 sm:gap-10 sm:-mx-4 lg:grid-cols-3 xl:grid-cols-4 lg:justify-between xl:-mx-8">
+					<div className="grid items-start justify-center grid-cols-2 gap-4 px-4 sm:items-center sm:-mb-8 sm:gap-10 sm:-mx-4 lg:grid-cols-3 xl:grid-cols-5 lg:justify-between xl:-mx-8">
 						{globalContext?.wooCommerceProducts?.length > 0 ? (
 							globalContext?.wooCommerceProducts?.map(
 								(item: any, index: any) => (

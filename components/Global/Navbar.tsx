@@ -79,7 +79,6 @@ const Navbar: FC = () => {
 							globalContext?.navbarMenuLinks.map((item: any, index: number) => (
 								<li key={index}>
 									<Link
-										onClick={toggleMenu}
 										href={`${item?.node?.url}`}
 										target={`${
 											item?.node?.target ? item?.node?.target : "_self"

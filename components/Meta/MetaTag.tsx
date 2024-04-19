@@ -7,7 +7,6 @@ const MetaTag = () => {
 
 	return (
 		<Head>
-			{/* <!-- Website Title --> */}
 			<title key="title">{`${pageContext?.seo?.title} | Official Website`}</title>
 			<meta name="description" content={pageContext?.seo?.metaDesc} />
 			<link rel="icon" href="/img/logos/Koun-Apex-Logo-Two.png" />

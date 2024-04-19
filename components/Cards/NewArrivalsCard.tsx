@@ -11,8 +11,8 @@ const NewArrivalsCard: FC<INewArrivalsCard> = ({name, slug, price, images}) => {
 		<>
 			<Link
 				aria-label={`${name}`}
-				href={slug ? `/store/products/${slug}` : `/`}
-				target={`${slug ? slug : "_self"}`}
+				href={slug ? `/store/product/${slug}` : `/`}
+				target="_self"
 			>
 				<motion.div
 					initial={initial}
@@ -28,7 +28,7 @@ const NewArrivalsCard: FC<INewArrivalsCard> = ({name, slug, price, images}) => {
 						height={500}
 						className={
 							images[0]?.src
-								? `block w-full mb-7 transition-transform duration-500 transform h-full min-h-[200px] sm:min-h-[350px] max-h-[350px] group-hover:scale-102 object-cover object center`
+								? `block w-full h-[300px] mb-7 transition-transform duration-500 transform  group-hover:scale-102 object-contain object center`
 								: `hidden`
 						}
 					/>
@@ -37,7 +37,7 @@ const NewArrivalsCard: FC<INewArrivalsCard> = ({name, slug, price, images}) => {
 					initial={initial}
 					whileInView={fadeInUp}
 					viewport={{once: true}}
-					className="text-base font-PlusJakartaSans tracking-widest text-center text-white"
+					className="text-base font-PlusJakartaSans tracking-widest text-center text-grey"
 				>
 					{name}
 				</motion.h3>
@@ -45,7 +45,7 @@ const NewArrivalsCard: FC<INewArrivalsCard> = ({name, slug, price, images}) => {
 					initial={initial}
 					whileInView={fadeInUp}
 					viewport={{once: true}}
-					className="text-paragraph font-PlusJakartaSans tracking-widest text-center text-white"
+					className="text-paragraph font-PlusJakartaSans tracking-widest text-center text-grey"
 				>
 					{`$${price}`}
 				</motion.h4>

@@ -5,7 +5,7 @@ import {IWooCommerceProducts} from "@/types/context";
 export const getAllProducts = async (): Promise<IWooCommerceProducts[]> => {
 	try {
 		const response: any = await fetch(
-			`${process.env.CMS_URL}/wp-json/wc/v3/products?consumer_key=${process.env.WOO_COMMERCE_KEY}&consumer_secret=${process.env.WOO_COMMERCE_SECRET}`
+			`${process.env.SITE_URL}/api/woocommerce/products/get-all-products`
 		);
 
 		if (!response.ok) {
