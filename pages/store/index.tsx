@@ -30,7 +30,11 @@ const StorePage: NextPage<IPageContext> = ({
 			>
 				<Layout>
 					<Store
+						storeCta={globalContext?.themesOptionsContent?.storeCta}
 						title={globalContext?.themesOptionsContent?.store?.title}
+						storeServicesLinks={
+							globalContext?.themesOptionsContent?.storeServicesLinks
+						}
 						subtitle={globalContext?.themesOptionsContent?.store?.subtitle}
 						heroTitle={globalContext?.themesOptionsContent?.store?.heroTitle}
 						paragraph={globalContext?.themesOptionsContent?.store?.paragraph}

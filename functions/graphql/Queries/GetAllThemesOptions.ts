@@ -62,6 +62,38 @@ export const getThemesOptionsContent = async () => {
 										}
 									}
 								}
+								storeCta {
+									title
+									paragraph
+									buttonLink {
+										url
+										title
+										target
+									}
+									backgroundImage {
+										altText
+										sourceUrl
+										mediaDetails {
+											height
+											width
+										}
+									}
+								}
+								storeServicesLinks {
+									image {
+										altText
+										sourceUrl
+										mediaDetails {
+											height
+											width
+										}
+									}
+									buttonLink {
+										url
+										title
+										target
+									}
+								}
 								displayNoticeBanner
 								noticeBannerTextarea
 							}

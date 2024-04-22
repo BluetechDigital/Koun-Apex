@@ -19,10 +19,10 @@ const ProductListCard: FC<IStore.IProductListCard> = ({
 	return (
 		<>
 			<Link
-				aria-label={`${name}`}
-				href={slug ? `/store/product/${slug}` : `/`}
 				target="_self"
+				aria-label={`${name}`}
 				className="group bg-white"
+				href={slug ? `/store/product/${slug}` : `/`}
 			>
 				<motion.div
 					initial={initial}
@@ -63,7 +63,7 @@ const ProductListCard: FC<IStore.IProductListCard> = ({
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="text-paragraph font-borexRegular tracking-[0.05rem] text-left text-primary-default"
+						className="text-base font-extrabold font-PlusJakartaSans tracking-[0.05rem] text-left text-black"
 					>
 						{`$${price}`}
 					</motion.h4>

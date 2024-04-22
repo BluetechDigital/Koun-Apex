@@ -147,6 +147,40 @@ export type IThemesOptionsContent = {
 			};
 		};
 	};
+	storeServicesLinks: [
+		{
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+		}
+	];
+	storeCta: {
+		title: string;
+		paragraph: string;
+		backgroundImage: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+		buttonLink: {
+			url: string;
+			title: string;
+			target: string;
+		};
+	};
 	displayNoticeBanner: boolean;
 	noticeBannerTextarea: string;
 };

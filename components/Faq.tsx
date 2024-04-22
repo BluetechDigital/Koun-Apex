@@ -7,12 +7,12 @@ import {
 } from "../animations/animations";
 import {motion} from "framer-motion";
 import {FC, Fragment, useState} from "react";
-import {IFaq} from "@/types/components/index";
+import {IFAQ} from "@/types/components/index";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
 
-const Faq: FC<IFaq> = ({title, subtitle, paragraph, faqGrid}) => {
+const Faq: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 	const [selectedItemIndex, setSelectedItemIndex] = useState(0);
 
 	const handleButtonClick = (index: any) => {

@@ -71,13 +71,18 @@ export type IHero = {
 };
 export type ICTATwo = {
 	title: string;
-	highlightText: string;
-	backgroundColor: string;
-	highlightTextColor: string;
 	buttonLink: {
 		url: string;
 		title: string;
 		target: string;
+	};
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
 	};
 };
 export type IHeroTwo = {
@@ -314,6 +319,15 @@ export type IPagination = {
 };
 
 // Cards
+export type ICTACard = {
+	title: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+};
 export type IFAQCard = {
 	index: number;
 	title: string;
@@ -334,7 +348,7 @@ export type ITestimonialsCard = {
 	name: string;
 	position: string;
 	paragraph: string;
-	starRating: number;
+	rating: number;
 	image: {
 		altText: string;
 		sourceUrl: string;
@@ -406,6 +420,40 @@ export namespace IStore {
 			mediaDetails: {
 				width: number;
 				height: number;
+			};
+		};
+		storeServicesLinks: [
+			{
+				image: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+				buttonLink: {
+					url: string;
+					title: string;
+					target: string;
+				};
+			}
+		];
+		storeCta: {
+			title: string;
+			paragraph: string;
+			backgroundImage: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
 			};
 		};
 	};

@@ -66,7 +66,6 @@ export namespace IEmailFooter {
 		height: string;
 		margin: string;
 		maxWidth: string;
-		marginBottom: string;
 	};
 }
 
