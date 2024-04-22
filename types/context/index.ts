@@ -95,6 +95,56 @@ export type INavbarMenuLinks = [
 		};
 	}
 ];
+export type IStorePageContent = {
+	store: {
+		title: string;
+		heroTitle: string;
+		subtitle: string;
+		paragraph: string;
+		heroImage: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+	storeServicesLinks: [
+		{
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+		}
+	];
+	storeCta: {
+		title: string;
+		paragraph: string;
+		backgroundImage: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+		buttonLink: {
+			url: string;
+			title: string;
+			target: string;
+		};
+	};
+};
 export type IThemesOptionsContent = {
 	email: string;
 	address: string;
@@ -245,6 +295,7 @@ export type IGlobalProps = {
 	copyrightLinks: ICopyrightLinks;
 	navbarMenuLinks: INavbarMenuLinks;
 	footerMenuLinks: IFooterMenuLinks;
+	storePageContent: IStorePageContent;
 	wooCommerceProducts: IWooCommerceProducts;
 	themesOptionsContent: IThemesOptionsContent;
 };
@@ -254,6 +305,7 @@ export type IGlobalContext = {
 	copyrightLinks: ICopyrightLinks;
 	navbarMenuLinks: INavbarMenuLinks;
 	footerMenuLinks: IFooterMenuLinks;
+	storePageContent: IStorePageContent;
 	wooCommerceProducts: IWooCommerceProducts;
 	themesOptionsContent: IThemesOptionsContent;
 };

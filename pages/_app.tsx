@@ -20,6 +20,7 @@ import {
 	getFooterMenuLinks,
 	getNavbarMenuLinks,
 } from "@/functions/graphql/Queries/GetAllMenuLinks";
+import {getStorePageContent} from "@/functions/graphql/Queries/GetAllStorePageOptions";
 import {getThemesOptionsContent} from "@/functions/graphql/Queries/GetAllThemesOptions";
 import {getAllTestimonialsContent} from "@/functions/graphql/Queries/GetAllTestimonials";
 
@@ -76,6 +77,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		themesOptionsContent,
 		testimonials,
 		wooCommerceProducts,
+		storePageContent,
 	]: any = await Promise.all([
 		getMobileLinks(),
 		getCopyrightLinks(),
@@ -84,6 +86,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		getThemesOptionsContent(),
 		getAllTestimonialsContent(),
 		getAllProducts(),
+		getStorePageContent(),
 	]);
 
 	const globalProps: IGlobalProps = {
@@ -92,6 +95,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		copyrightLinks: copyrightLinks,
 		navbarMenuLinks: navbarMenuLinks,
 		footerMenuLinks: footerMenuLinks,
+		storePageContent: storePageContent,
 		wooCommerceProducts: wooCommerceProducts,
 		themesOptionsContent: themesOptionsContent,
 	};

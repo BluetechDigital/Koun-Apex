@@ -16,6 +16,7 @@ const GlobalContextProvider: FC<IGlobalContextProvider> = ({
 					copyrightLinks: globalProps?.copyrightLinks,
 					footerMenuLinks: globalProps?.footerMenuLinks,
 					navbarMenuLinks: globalProps?.navbarMenuLinks,
+					storePageContent: globalProps?.storePageContent,
 					wooCommerceProducts: globalProps?.wooCommerceProducts,
 					themesOptionsContent: globalProps?.themesOptionsContent,
 				}}
