@@ -1,26 +1,18 @@
 "use client";
 
 // Imports
-import {
-	initial,
-	stagger,
-	fadeInUp,
-	arrayLoopStaggerChildren,
-	slideInLeftInitial,
-	slideInRightFinish,
-} from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
-import {useState, FC, Fragment} from "react";
+import {useState, FC} from "react";
 import {useGlobalContext} from "@/context/global";
+import {initial, stagger, fadeInUp} from "@/animations/animations";
 
 // Styling
 import styles from "./../../styles/components/Navbar.module.scss";
 
 // Components
 import SideMenu from "../Elements/SideMenu";
-import RenderStars from "../Elements/RenderStars";
 import NoticeInfoBanner from "../NoticeInfoBanner";
 import NavbarContactInfoBanner from "../Elements/NavbarContactInfoBanner";
 
@@ -104,40 +96,6 @@ const Navbar: FC = () => {
 						)}
 					</motion.ul>
 					<div className="flex items-center justify-end gap-4">
-						<motion.div
-							initial={initial}
-							variants={stagger}
-							whileInView="animate"
-							viewport={{once: true}}
-							className="hidden md:grid md:grid-cols-2 lg:hidden w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 py-[1px] px-4 2xl:grid 2xl:grid-cols-2 items-center justify-center lg:justify-start gap-4"
-						>
-							<div className="flex items-center justify-center lg:justify-start gap-3">
-								<Image
-									className="bg-white my-auto lg:mx-0 rounded-full p-1 w-8 h-8 object-cover object-center"
-									alt={`Google reviews logo`}
-									src="/svg/google-tile-logo.svg"
-									width={500}
-									height={500}
-								/>
-								<div className="flex flex-col gap-1">
-									<div className="flex items-center justify-start gap-1">
-										<RenderStars rating={5} />
-									</div>
-									<h3 className="font-medium text-sm font-PlusJakartaSans text-black">
-										5.0 Rating
-									</h3>
-								</div>
-							</div>
-							<div className="flex items-center justify-center lg:justify-start gap-0 basis-1/2">
-								<Image
-									className="my-auto lg:mx-0 p-1 w-full h-9 object-cover object-center"
-									alt={`Trustpilot reviews logo`}
-									src="/svg/trustpilot-logo-black.svg"
-									width={500}
-									height={500}
-								/>
-							</div>
-						</motion.div>
 						<Link
 							href="/cart"
 							target="_self"

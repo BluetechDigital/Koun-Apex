@@ -43,21 +43,6 @@ export const getAllFlexibleContentComponents = async (
               											width
               										}
               									}
-												servicesLinks {
-													image {
-														altText
-														sourceUrl
-														mediaDetails {
-															height
-															width
-														}
-													}
-													buttonLink {
-														url
-														title
-														target
-													}
-												}
 											}
 											... on ${postTypeFlexibleContent}_HeroTwo {
 												fieldGroupName

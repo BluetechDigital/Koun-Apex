@@ -1,14 +1,12 @@
 // Imports
 import {
-	initial,
 	slideInLeftInitial,
 	slideInRightFinish,
 	slideInRightInitial,
-	arrayLoopStaggerChildren,
 } from "../animations/animations";
 import Link from "next/link";
 import Image from "next/image";
-import {FC, Fragment} from "react";
+import {FC} from "react";
 import {motion} from "framer-motion";
 import {IHero} from "@/types/components/index";
 
@@ -17,14 +15,12 @@ import styles from "../styles/components/Hero.module.scss";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
-import ServicesLinksCard from "./Cards/ServicesLinksCard";
 
 const Hero: FC<IHero> = ({
 	title,
 	paragraph,
 	buttonLink,
 	buttonLinkTwo,
-	servicesLinks,
 	backgroundImage,
 }) => {
 	return (
@@ -45,18 +41,18 @@ const Hero: FC<IHero> = ({
 							),url("${backgroundImage?.sourceUrl}")`,
 						}}
 					>
-						<div className="bg-transparent xl:bg-white w-full h-full px-4 lg:px-10 2xl:px-28 py-16 xl:py-8 flex flex-col justify-center">
+						<div className="bg-transparent xl:bg-pureBlack w-full h-full px-4 lg:px-10 2xl:px-28 py-16 xl:py-8 flex flex-col justify-center">
 							<motion.h1
 								viewport={{once: true}}
 								initial={slideInLeftInitial}
 								whileInView={slideInRightFinish}
-								className="font-ObjectSans text-center lg:text-left uppercase text-lg lg:text-3xl 2xl:text-5xl text-white xl:text-black xl:leading-tight"
+								className="font-ObjectSans text-center lg:text-left uppercase text-lg lg:text-3xl 2xl:text-5xl text-white xl:text-grey xl:leading-tight"
 							>
 								{title}
 							</motion.h1>
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="py-2 text-white xl:text-black leading-[1.75rem] text-base text-center lg:text-left"
+								tailwindStyling="py-2 text-white xl:text-grey leading-[1.75rem] text-base text-center lg:text-left"
 							/>
 							<motion.div
 								viewport={{once: true}}
@@ -76,7 +72,7 @@ const Hero: FC<IHero> = ({
 									href={`${buttonLinkTwo?.url}`}
 									target={buttonLinkTwo?.target}
 									aria-label={`${buttonLinkTwo?.title}`}
-									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-primary-default hover:bg-primary-darker  uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all ease-in-out duration-500`}
+									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-primary-default hover:bg-accent-default  uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all ease-in-out duration-500`}
 								>
 									{buttonLinkTwo?.title}
 								</Link>
@@ -113,54 +109,6 @@ const Hero: FC<IHero> = ({
 							}`}
 						/>
 					</motion.div>
-				</div>
-				<div className="relative flex flex-row p-2 justify-start items-center lg:justify-between">
-					<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 w-full flex-row items-center justify-start bg-white ">
-						{servicesLinks?.length > 0 ? (
-							servicesLinks?.map((item: any, index: number) => (
-								<Fragment key={index}>
-									<motion.li
-										custom={index}
-										initial={initial}
-										whileInView="animate"
-										viewport={{once: true}}
-										variants={arrayLoopStaggerChildren}
-										className="hidden xl:block bg-cover bg-no-repeat bg-center hover:bg-accent-default"
-										style={{
-											backgroundImage: `linear-gradient(
-												0deg,
-												rgba(6, 18, 41, 0.50),
-												rgba(6, 18, 41, 0.50),
-												rgba(6, 18, 41, 0.50)
-											),url("${item?.image?.sourceUrl}")`,
-										}}
-									>
-										<ServicesLinksCard buttonLink={item?.buttonLink} />
-									</motion.li>
-									<motion.li
-										custom={index}
-										initial={initial}
-										whileInView="animate"
-										viewport={{once: true}}
-										variants={arrayLoopStaggerChildren}
-										className="block xl:hidden bg-cover bg-no-repeat bg-center hover:bg-accent-default"
-										style={{
-											backgroundImage: `linear-gradient(
-												0deg,
-												rgba(6, 18, 41, 0.20),
-												rgba(6, 18, 41, 0.20),
-												rgba(6, 18, 41, 0.20)
-											),url("${item?.image?.sourceUrl}")`,
-										}}
-									>
-										<ServicesLinksCard buttonLink={item?.buttonLink} />
-									</motion.li>
-								</Fragment>
-							))
-						) : (
-							<></>
-						)}
-					</ul>
 				</div>
 			</div>
 		</>

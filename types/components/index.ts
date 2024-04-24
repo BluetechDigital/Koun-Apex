@@ -51,23 +51,6 @@ export type IHero = {
 			height: number;
 		};
 	};
-	servicesLinks: [
-		{
-			image: {
-				altText: string;
-				sourceUrl: string;
-				mediaDetails: {
-					width: number;
-					height: number;
-				};
-			};
-			buttonLink: {
-				url: string;
-				title: string;
-				target: string;
-			};
-		}
-	];
 };
 export type ICTATwo = {
 	title: string;

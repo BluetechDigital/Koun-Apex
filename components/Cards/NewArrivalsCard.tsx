@@ -28,7 +28,7 @@ const NewArrivalsCard: FC<INewArrivalsCard> = ({name, slug, price, images}) => {
 						height={500}
 						className={
 							images[0]?.src
-								? `block w-full lg:h-[225px] 2xl:h-[300px] mb-7 transition-transform duration-500 transform  group-hover:scale-102 object-contain object center`
+								? `block w-full lg:h-[225px] 2xl:h-[300px] mb-2 transition-transform duration-500 transform  group-hover:scale-102 object-contain object center`
 								: `hidden`
 						}
 					/>
@@ -37,7 +37,7 @@ const NewArrivalsCard: FC<INewArrivalsCard> = ({name, slug, price, images}) => {
 					initial={initial}
 					whileInView={fadeInUp}
 					viewport={{once: true}}
-					className="text-base font-PlusJakartaSans tracking-widest text-center text-grey"
+					className="text-base font-PlusJakartaSans tracking-[0.05rem] text-left text-grey"
 				>
 					{name}
 				</motion.h3>
@@ -45,7 +45,11 @@ const NewArrivalsCard: FC<INewArrivalsCard> = ({name, slug, price, images}) => {
 					initial={initial}
 					whileInView={fadeInUp}
 					viewport={{once: true}}
-					className="text-paragraph font-PlusJakartaSans tracking-widest text-center text-grey"
+					className={
+						price
+							? "text-base font-PlusJakartaSans tracking-widest text-left text-grey"
+							: "hidden"
+					}
 				>
 					{`$${price}`}
 				</motion.h4>

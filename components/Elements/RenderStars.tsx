@@ -10,7 +10,7 @@ const RenderStars: FC<IRenderStars> = ({rating}) => {
 				stars.push(
 					<svg
 						key={i}
-						className="mr-1 w-2.5 h-2.5"
+						className="mr-[1px] w-3.5 h-3.5"
 						width="20"
 						height="20"
 						viewBox="0 0 20 20"

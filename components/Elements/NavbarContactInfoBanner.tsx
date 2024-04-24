@@ -6,6 +6,9 @@ import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {initial, stagger} from "@/animations/animations";
 
+// Components
+import RenderStars from "./RenderStars";
+
 const NavbarContactInfoBanner: FC = () => {
 	const globalContext = useGlobalContext();
 
@@ -260,46 +263,6 @@ const NavbarContactInfoBanner: FC = () => {
 							{globalContext?.themesOptionsContent?.email}
 						</Link>
 					</div>
-					<div
-						className={
-							globalContext?.themesOptionsContent?.phoneNumber
-								? "flex items-center justify-center gap-2"
-								: "hidden"
-						}
-					>
-						<div className="flex items-center justify-center w-7 h-7 rounded-full bg-primary-default ">
-							<svg
-								fill="#ffffff"
-								stroke="#ffffff"
-								className="w-5 h-5"
-								viewBox="0 0 1024 1024"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-								<g
-									id="SVGRepo_tracerCarrier"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								></g>
-								<g id="SVGRepo_iconCarrier">
-									<path
-										fill="#ffffff"
-										d="M199.232 125.568 90.624 379.008a32 32 0 0 0 6.784 35.2l512.384 512.384a32 32 0 0 0 35.2 6.784l253.44-108.608a32 32 0 0 0 10.048-52.032L769.6 633.92a32 32 0 0 0-36.928-5.952l-130.176 65.088-271.488-271.552 65.024-130.176a32 32 0 0 0-5.952-36.928L251.2 115.52a32 32 0 0 0-51.968 10.048z"
-									></path>
-								</g>
-							</svg>
-						</div>
-						<h3 className="font-medium uppercase text-lg tracking-[0.05rem] font-schaboCondensed text-black">
-							Office:
-						</h3>
-						<Link
-							className="text-tiny font-PlusJakartaSans text-black hover:opacity-70"
-							href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
-							aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
-						>
-							{globalContext?.themesOptionsContent?.phoneNumber}
-						</Link>
-					</div>
 				</div>
 				<div className="flex flex-row items-center gap-2">
 					<motion.div
@@ -307,29 +270,26 @@ const NavbarContactInfoBanner: FC = () => {
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 rounded-2xl grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center lg:justify-start gap-2"
+						className="w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 pr-2 rounded-2xl grid sm:grid-cols-2 items-center justify-center lg:justify-end gap-4"
 					>
-						<Image
-							className="my-auto lg:mx-0 w-fit h-5 object-contain object-center"
-							alt={`Stripe logo`}
-							src="/svg/stripe-4.svg"
-							width={500}
-							height={500}
-						/>
-						<Image
-							className="my-auto lg:mx-0 w-fit h-4 object-contain object-center"
-							alt={`Visa logo`}
-							src="/svg/visa-10.svg"
-							width={500}
-							height={500}
-						/>
-						<Image
-							className="my-auto lg:mx-0 w-fit h-7 object-contain object-center"
-							alt={`Mastercard logo`}
-							src="/svg/Mastercard-logo.png"
-							width={500}
-							height={500}
-						/>
+						<div className="flex items-center justify-center lg:justify-end gap-0">
+							<Image
+								className="w-fit h-10 object-contain object-center"
+								alt={`Google reviews logo`}
+								src="/svg/google-review-logo.png"
+								width={500}
+								height={500}
+							/>
+						</div>
+						<div className="flex items-center justify-center lg:justify-start gap-0 basis-1/2">
+							<Image
+								className="my-auto lg:mx-0 w-full h-7 mb-1 object-cover object-center"
+								alt={`Trustpilot reviews logo`}
+								src="/svg/trustpilot-logo-black.svg"
+								width={500}
+								height={500}
+							/>
+						</div>
 					</motion.div>
 					<div className="flex flex-row items-center gap-2">
 						<h3 className="hidden lg:block font-medium uppercase text-lg tracking-[0.05rem] font-schaboCondensed text-black">

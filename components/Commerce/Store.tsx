@@ -203,8 +203,8 @@ const Store: FC<IStore.IStore> = ({
 													slug={item?.slug}
 													name={item?.name}
 													images={item?.images}
-													price={item?.regular_price}
 													description={item?.description}
+													price={item?.regular_price || item?.price}
 												/>
 											</motion.div>
 										</Fragment>
