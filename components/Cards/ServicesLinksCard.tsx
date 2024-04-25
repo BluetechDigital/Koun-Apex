@@ -15,7 +15,7 @@ const ServicesLinksCard: FC<IServicesLinksCard> = ({buttonLink}) => {
 				aria-label={`${buttonLink?.title}`}
 			>
 				<div
-					className={`p-2 bg-transparent hover:bg-accent-default w-full h-ful min-h-[20vh] flex flex-col gap-4 items-center justify-center transition-all ease-in-out duration-500`}
+					className={`p-2 bg-transparent hover:bg-accent-default w-full h-ful min-h-[20vh] flex flex-col gap-4 items-center justify-center transition-all duration-500 ease-in-out`}
 				>
 					<Title
 						content={buttonLink?.title}

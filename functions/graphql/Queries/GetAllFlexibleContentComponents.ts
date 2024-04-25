@@ -35,14 +35,31 @@ export const getAllFlexibleContentComponents = async (
                 									title
                 									target
                 								}
-              									backgroundImage {
-              										altText
-              										sourceUrl
-              										mediaDetails {
-              											height
-              											width
-              										}
-              									}
+												servicesLinks {
+													link {
+														url
+														title
+														target
+													}
+													image {
+														altText
+														sourceUrl
+														mediaDetails {
+															height
+															width
+														}
+													}
+												}
+              									mainImageSlider {
+													image {
+														altText
+														sourceUrl
+														mediaDetails {
+															height
+															width
+														}
+													}
+												}
 											}
 											... on ${postTypeFlexibleContent}_HeroTwo {
 												fieldGroupName
@@ -153,6 +170,28 @@ export const getAllFlexibleContentComponents = async (
 													url
 													title
 													target
+												}
+											}
+											... on ${postTypeFlexibleContent}_SocialMediaGrid {
+												fieldGroupName
+												displaySection
+												highlightsGrid {
+													hearts
+													comments
+													textarea
+													link {
+														url
+														title
+														target
+													}
+													image {
+														altText
+														sourceUrl
+														mediaDetails {
+															height
+															width
+														}
+													}
 												}
 											}
 											... on ${postTypeFlexibleContent}_Accreditations {

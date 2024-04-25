@@ -144,7 +144,7 @@ const Store: FC<IStore.IStore> = ({
 									href={`${storeCta?.buttonLink?.url}`}
 									target={storeCta?.buttonLink?.target}
 									aria-label={`${storeCta?.buttonLink?.title}`}
-									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-primary-default hover:bg-accent-default  uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all ease-in-out duration-500`}
+									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-primary-default hover:bg-accent-default  uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all duration-500 ease-in-out`}
 								>
 									{storeCta?.buttonLink?.title}
 								</Link>

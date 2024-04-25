@@ -53,7 +53,7 @@ const CTATwo: FC<ICTATwo> = ({title, buttonLink, backgroundImage}) => {
 									aria-label={`${buttonLink?.title}`}
 									className={`${
 										buttonLink?.url ? "block" : "hidden"
-									} py-4 px-6 cursor-pointer bg-primary-default hover:bg-accent-default transition-all ease-in-out duration-500 font-semibold uppercase text-lightGrey text-base text-center font-ObjectSans`}
+									} py-4 px-6 cursor-pointer bg-primary-default hover:bg-accent-default transition-all duration-500 ease-in-out font-semibold uppercase text-lightGrey text-base text-center font-ObjectSans`}
 								>
 									{buttonLink?.title}
 								</Link>

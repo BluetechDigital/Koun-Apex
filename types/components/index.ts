@@ -43,14 +43,35 @@ export type IHero = {
 		title: string;
 		target: string;
 	};
-	backgroundImage: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			width: number;
-			height: number;
-		};
-	};
+	servicesLinks: [
+		{
+			link: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+	mainImageSlider: [
+		{
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
 };
 export type ICTATwo = {
 	title: string;
@@ -209,6 +230,28 @@ export type ITestimonialsTwo = {
 		target: string;
 	};
 };
+export type ISocialMediaGrid = {
+	highlightsGrid: [
+		{
+			hearts: number;
+			comments: number;
+			textarea: string;
+			link: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
 export type ITestimonialsGrid = {
 	title: string;
 	subtitle: string;
@@ -316,6 +359,21 @@ export type IFAQCard = {
 	title: string;
 	paragraph: string;
 };
+export type IHeroCard = {
+	link: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+};
 export type INewArrivalsCard = {
 	name: string;
 	slug: string;
@@ -331,6 +389,7 @@ export type ITestimonialsCard = {
 	name: string;
 	position: string;
 	paragraph: string;
+	reviewType: string;
 	rating: number;
 	image: {
 		altText: string;

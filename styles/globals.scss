@@ -82,7 +82,7 @@ h2 {
 
 .swiper-button-prev,
 .swiper-button-next {
-	@apply mt-64 lg:mt-0 w-16 h-16 p-8 border-2 border-primary-darker hover:border-primary-darker text-primary-darker hover:text-primary-darker;
+	@apply flex items-center justify-center mt-64 lg:mt-0 w-16 h-16 p-8 border-2 border-primary-default hover:border-primary-default text-primary-default hover:text-primary-default;
 
 	top: 85% !important;
 
@@ -97,7 +97,7 @@ h2 {
 	height: 15px !important;
 	font-size: 15px !important;
 	font-weight: 900 !important;
-	color: $primary-dark !important;
+	color: $white !important;
 }
 
 .swiper-button-next::after {
@@ -106,7 +106,34 @@ h2 {
 	height: 15px !important;
 	font-size: 15px !important;
 	font-weight: 900 !important;
-	color: $primary-dark !important;
+	color: $white !important;
+}
+
+.HeroSwiperSlider {
+	.swiper-button-prev {
+		@apply ml-0 lg:ml-4;
+	}
+
+	.swiper-button-next {
+		@apply mr-0 lg:mr-4;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		@apply flex lg:hidden mt-[-10px] lg:mt-0 w-16 h-16 p-2 md:p-8 hover:bg-primary-default;
+	}
+
+	.swiper-button-prev::after {
+		content: "prev";
+		color: $white !important;
+		display: block !important;
+	}
+
+	.swiper-button-next::after {
+		content: "next";
+		color: $white !important;
+		display: block !important;
+	}
 }
 
 /* SQUARE BOX CUBES

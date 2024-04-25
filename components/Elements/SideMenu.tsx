@@ -41,7 +41,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 							viewport={{once: true}}
 						>
 							{globalContext?.mobileLinks.length > 0 ? (
-								globalContext?.mobileLinks.map((item: any, index: number) => (
+								globalContext?.mobileLinks?.map((item: any, index: number) => (
 									<li key={index}>
 										<Link
 											onClick={toggleMenu}
@@ -50,7 +50,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 												item?.node?.target ? item?.node?.target : "_self"
 											}`}
 											aria-label={`${item?.node?.label}`}
-											className="font-borexRegular uppercase text-black text-lg md:text-xl xl:text-3xl tracking-[0.05rem] hover:text-accent-default transition-all duration-200 ease-in-out"
+											className="font-borexRegular uppercase text-black text-3xl tracking-[0.05rem] hover:text-accent-default transition-all duration-200 ease-in-out"
 										>
 											{item?.node?.label}
 										</Link>
@@ -230,7 +230,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="flex flex-col items-center justify-center w-auto gap-4 py-6 mb-10"
+								className="flex flex-col items-baseline justify-center w-auto gap-4 py-6 mb-10"
 							>
 								<div
 									className={

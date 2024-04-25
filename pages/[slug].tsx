@@ -37,7 +37,7 @@ const dynamicPages: NextPage<IPageContext> = ({
 
 export async function getStaticPaths() {
 	const data = await getAllPagesSlugs();
-	const paths = data.map((item) => ({
+	const paths = data?.map((item) => ({
 		params: {
 			slug: item?.slug as String,
 		},

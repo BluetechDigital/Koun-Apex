@@ -48,7 +48,7 @@ const Navbar: FC = () => {
 							} w-fit h-full cursor-pointer group flex flex-col items-center justify-center transition-all duration-200 ease-in-out`}
 						>
 							<span className="mt-[2px] font-schaboCondensed text-lg text-center tracking-[0.05rem] text-white uppercase">
-								Menu
+								{menuActive ? "Close" : "Menu"}
 							</span>
 						</motion.button>
 						<motion.button
@@ -77,20 +77,22 @@ const Navbar: FC = () => {
 						className="hidden lg:flex itemc-center justify-center gap-5"
 					>
 						{globalContext?.navbarMenuLinks.length > 0 ? (
-							globalContext?.navbarMenuLinks.map((item: any, index: number) => (
-								<li key={index}>
-									<Link
-										href={`${item?.node?.url}`}
-										target={`${
-											item?.node?.target ? item?.node?.target : "_self"
-										}`}
-										aria-label={`${item?.node?.label}`}
-										className="font-borexRegular uppercase text-black text-lg xl:text-xl tracking-[0.05rem] hover:text-accent-default transition-all duration-200 ease-in-out"
-									>
-										{item?.node?.label}
-									</Link>
-								</li>
-							))
+							globalContext?.navbarMenuLinks?.map(
+								(item: any, index: number) => (
+									<li key={index}>
+										<Link
+											href={`${item?.node?.url}`}
+											target={`${
+												item?.node?.target ? item?.node?.target : "_self"
+											}`}
+											aria-label={`${item?.node?.label}`}
+											className="font-borexRegular uppercase text-black text-lg xl:text-xl tracking-[0.05rem] hover:text-accent-default transition-all duration-200 ease-in-out"
+										>
+											{item?.node?.label}
+										</Link>
+									</li>
+								)
+							)
 						) : (
 							<></>
 						)}

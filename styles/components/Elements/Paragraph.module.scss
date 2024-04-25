@@ -29,7 +29,7 @@
 			}
 
 			a {
-				@apply font-semibold underline text-primary-two hover:text-accent-two transition-all ease-in-out duration-500;
+				@apply font-semibold underline text-primary-two hover:text-accent-two transition-all duration-500 ease-in-out;
 			}
 		}
 	}
@@ -37,7 +37,7 @@
 	p {
 		font-family: $body;
 		a {
-			@apply font-semibold underline text-primary-two hover:text-accent-two transition-all ease-in-out duration-500;
+			@apply font-semibold underline text-primary-two hover:text-accent-two transition-all duration-500 ease-in-out;
 		}
 
 		img {

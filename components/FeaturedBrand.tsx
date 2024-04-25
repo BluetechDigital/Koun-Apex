@@ -24,7 +24,7 @@ const FeaturedBrand: FC<IFeaturedBrand> = ({brandsGrid}) => {
 						} lg:items-center lg:justify-between`}
 					>
 						{brandsGrid?.length > 0 ? (
-							brandsGrid.map((item: any, index: number) => (
+							brandsGrid?.map((item: any, index: number) => (
 								<Fragment key={index}>
 									<motion.div
 										custom={index}

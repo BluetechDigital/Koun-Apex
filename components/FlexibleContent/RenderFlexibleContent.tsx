@@ -17,6 +17,7 @@ import FeaturedBrand from "../FeaturedBrand";
 import TitleParagraph from "../TitleParagraph";
 import Accreditations from "../Accreditations";
 import Maintenance from "../Global/Maintenance";
+import SocialMediaGrid from "../SocialMediaGrid";
 import TestimonialsTwo from "../TestimonialsTwo";
 import TestimonialsGrid from "../TestimonialsGrid";
 import TitleContentImage from "../TitleContentImage";
@@ -43,6 +44,7 @@ const RenderFlexibleContent: FC = () => {
 		[`${FlexibleContent}_FeaturedBrand`]: FeaturedBrand,
 		[`${FlexibleContent}_TitleParagraph`]: TitleParagraph,
 		[`${FlexibleContent}_Accreditations`]: Accreditations,
+		[`${FlexibleContent}_SocialMediaGrid`]: SocialMediaGrid,
 		[`${FlexibleContent}_TestimonialsTwo`]: TestimonialsTwo,
 		[`${FlexibleContent}_TestimonialsGrid`]: TestimonialsGrid,
 		[`${FlexibleContent}_TitleContentImage`]: TitleContentImage,

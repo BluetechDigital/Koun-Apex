@@ -47,7 +47,7 @@ const Pagination: FC<IPagination> = ({
 
 	const buttonClipPath = "polygon(95% 0, 100% 15%, 100% 100%, 0 100%, 0 0)";
 	const tailwindButtonStyling =
-		"relative px-6 py-2 text-pureBlack hover:text-white font-semibold tracking-widest text-tiny w-fit border-2 border-solid border-primary-two hover:bg-primary-three hover:border-primary-three transition-all ease-in-out duration-500 before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-primary-three after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-primary-three";
+		"relative px-6 py-2 text-pureBlack hover:text-white font-semibold tracking-widest text-tiny w-fit border-2 border-solid border-primary-two hover:bg-primary-three hover:border-primary-three transition-all duration-500 ease-in-out before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-primary-three after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-primary-three";
 
 	return (
 		<>

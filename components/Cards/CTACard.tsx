@@ -41,7 +41,7 @@ const CTACard: FC<ICTACard> = ({title, paragraph, buttonLink}) => {
 							aria-label={`${buttonLink?.title}`}
 							className={buttonLink?.url ? "block" : "hidden"}
 						>
-							<div className="py-6 pl-4 pr-10 cursor-pointer bg-accent-default hover:bg-accent-default transition-all ease-in-out duration-500">
+							<div className="py-6 pl-4 pr-10 cursor-pointer bg-accent-default hover:bg-accent-default transition-all duration-500 ease-in-out">
 								<span className="font-ObjectSans uppercase relative flex items-center justify-center pl-4 text-lightGrey text-base text-center">
 									{buttonLink?.title}
 									<Image
