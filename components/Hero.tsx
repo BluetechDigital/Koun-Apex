@@ -105,7 +105,7 @@ const Hero: FC<IHero> = ({
 										href={`${buttonLink?.url}`}
 										target={buttonLink?.target}
 										aria-label={`${buttonLink?.title}`}
-										className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-pureBlack group-hover:bg-primary-default uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all delay-200 duration-500 ease-in-out`}
+										className="w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-pureBlack group-hover:bg-primary-default uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all delay-200 duration-500 ease-in-out"
 									>
 										{buttonLink?.title}
 									</Link>
@@ -113,7 +113,7 @@ const Hero: FC<IHero> = ({
 										href={`${buttonLinkTwo?.url}`}
 										target={buttonLinkTwo?.target}
 										aria-label={`${buttonLinkTwo?.title}`}
-										className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-pureBlack hover:bg-lightGreyTwo uppercase text-lightGrey hover:text-pureBlack text-base text-center font-borexRegular tracking-[0.05rem] transition-all duration-500 ease-in-out`}
+										className="w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-pureBlack hover:bg-lightGreyTwo uppercase text-lightGrey hover:text-pureBlack text-base text-center font-borexRegular tracking-[0.05rem] transition-all duration-500 ease-in-out"
 									>
 										{buttonLinkTwo?.title}
 									</Link>
@@ -144,7 +144,7 @@ const Hero: FC<IHero> = ({
 									href={`${buttonLink?.url}`}
 									target={buttonLink?.target}
 									aria-label={`${buttonLink?.title}`}
-									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-pureBlack hover:bg-primary-default uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all duration-500 ease-in-out`}
+									className="w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-pureBlack hover:bg-primary-default uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all duration-500 ease-in-out"
 								>
 									{buttonLink?.title}
 								</Link>
@@ -152,7 +152,7 @@ const Hero: FC<IHero> = ({
 									href={`${buttonLinkTwo?.url}`}
 									target={buttonLinkTwo?.target}
 									aria-label={`${buttonLinkTwo?.title}`}
-									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-pureBlack hover:bg-primary-default uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all duration-500 ease-in-out`}
+									className="w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-pureBlack hover:bg-primary-default uppercase text-lightGrey text-base text-center font-borexRegular tracking-[0.05rem] transition-all duration-500 ease-in-out"
 								>
 									{buttonLinkTwo?.title}
 								</Link>

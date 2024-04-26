@@ -10,6 +10,7 @@ import Hero from "../Hero";
 import CTATwo from "../CTATwo";
 import FAQTwo from "../FAQTwo";
 import HeroTwo from "../HeroTwo";
+import VideoBlock from "../VideoBlock";
 import ContactForm from "../ContactForm";
 import NewArrivals from "../NewArrivals";
 import ErrorPage from "../Global/ErrorPage";
@@ -20,6 +21,7 @@ import Maintenance from "../Global/Maintenance";
 import SocialMediaGrid from "../SocialMediaGrid";
 import TestimonialsTwo from "../TestimonialsTwo";
 import TestimonialsGrid from "../TestimonialsGrid";
+import FeaturedProducts from "../FeaturedProducts";
 import TitleContentImage from "../TitleContentImage";
 import AboutContentImage from "../AboutContentImage";
 import TestimonialsSlider from "../TestimonialsSlider";
@@ -37,6 +39,7 @@ const RenderFlexibleContent: FC = () => {
 		[`${FlexibleContent}_CtaTwo`]: CTATwo,
 		[`${FlexibleContent}_FAQTwo`]: FAQTwo,
 		[`${FlexibleContent}_HeroTwo`]: HeroTwo,
+		[`${FlexibleContent}_VideoBlock`]: VideoBlock,
 		[`${FlexibleContent}_ContactForm`]: ContactForm,
 		[`${FlexibleContent}_NewArrivals`]: NewArrivals,
 		[`${FlexibleContent}_Maintenance`]: Maintenance,
@@ -47,6 +50,7 @@ const RenderFlexibleContent: FC = () => {
 		[`${FlexibleContent}_SocialMediaGrid`]: SocialMediaGrid,
 		[`${FlexibleContent}_TestimonialsTwo`]: TestimonialsTwo,
 		[`${FlexibleContent}_TestimonialsGrid`]: TestimonialsGrid,
+		[`${FlexibleContent}_FeaturedProducts`]: FeaturedProducts,
 		[`${FlexibleContent}_TitleContentImage`]: TitleContentImage,
 		[`${FlexibleContent}_AboutContentImage`]: AboutContentImage,
 		[`${FlexibleContent}_TestimonialsSlider`]: TestimonialsSlider,

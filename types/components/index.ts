@@ -140,10 +140,8 @@ export type IStoreTwo = {
 export type IVideoBlock = {
 	title: string;
 	video: string;
-	subtitle: string;
 	paragraph: string;
 	displayVideo: boolean;
-	highlightText: string;
 	displayYoutubeIcon: boolean;
 	buttonLink: {
 		url: string;
@@ -256,6 +254,15 @@ export type ITestimonialsGrid = {
 	title: string;
 	subtitle: string;
 	paragraph: string;
+};
+export type IFeaturedProducts = {
+	title: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 };
 export type IAboutContentImage = {
 	title: string;
@@ -417,6 +424,17 @@ export type ITitleContentImageCard = {
 		target: string;
 	};
 };
+export type IFeaturedProductsCard = {
+	name: string;
+	slug: string;
+	price: string;
+	images: [
+		{
+			src: string;
+			name: string;
+		}
+	];
+};
 
 // Elements
 export type ITitle = {
@@ -447,6 +465,10 @@ export type IButtonBorderSliced = {
 	title: string;
 	fullWidth: boolean;
 	tailwindColor: string;
+};
+export type IYoutubeButtonBorderSliced = {
+	title: string;
+	displayYoutubeIcon: boolean;
 };
 
 /* Store E-Commerce Components */

@@ -82,6 +82,28 @@ export const getAllFlexibleContentComponents = async (
 												subtitle
 												paragraph
 											}
+											... on ${postTypeFlexibleContent}_VideoBlock {
+												fieldGroupName
+												displaySection
+												title
+												video
+												paragraph
+												displayVideo
+												displayYoutubeIcon
+												buttonLink {
+													url
+													title
+													target
+												}
+												videoBackgroundImage {
+            										altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
+              									}
+											}
 											... on ${postTypeFlexibleContent}_TitleParagraph {
 												fieldGroupName
 												title
@@ -158,6 +180,17 @@ export const getAllFlexibleContentComponents = async (
 															width
 														}
 													}
+												}
+											}
+											... on ${postTypeFlexibleContent}_FeaturedProducts {
+												fieldGroupName
+												displaySection
+												title
+												paragraph
+												buttonLink {
+													url
+													title
+													target
 												}
 											}
 											... on ${postTypeFlexibleContent}_NewArrivals {
