@@ -1,9 +1,10 @@
 // Imports
 import {
 	initial,
-	stagger,
+	fadeInUp,
 	slideInRightFinish,
 	slideInRightInitial,
+	slideInLeftInitial,
 } from "@/animations/animations";
 import {FC} from "react";
 import Link from "next/link";
@@ -39,10 +40,9 @@ const VideoBlock: FC<IVideoBlock> = ({
 			>
 				<div className="flex flex-col xl:flex-row items-center justify-between gap-4 lg:gap-16 py-4">
 					<motion.div
-						initial={initial}
-						variants={stagger}
-						whileInView="animate"
 						viewport={{once: true}}
+						initial={slideInLeftInitial}
+						whileInView={slideInRightFinish}
 						className="max-w-2xl mx-auto text-center lg:max-w-5xl w-full xl:w-[35%]"
 					>
 						<Title
@@ -51,10 +51,9 @@ const VideoBlock: FC<IVideoBlock> = ({
 						/>
 					</motion.div>
 					<motion.div
-						initial={initial}
-						variants={stagger}
-						whileInView="animate"
 						viewport={{once: true}}
+						initial={slideInRightInitial}
+						whileInView={slideInRightFinish}
 						className={
 							paragraph && buttonLink?.url
 								? "flex flex-col items-end justify-center text-center lg:text-left w-full xl:w-[65%]"
@@ -85,9 +84,9 @@ const VideoBlock: FC<IVideoBlock> = ({
 					</motion.div>
 				</div>
 				<motion.div
+					initial={initial}
+					whileInView={fadeInUp}
 					viewport={{once: true}}
-					initial={slideInRightInitial}
-					whileInView={slideInRightFinish}
 					className={`${
 						displayVideo ? "h-fit" : "h-[300px] lg:h-[500px]"
 					} bg-center bg-no-repeat bg-cover mt-6 lg:mt-0 w-full`}

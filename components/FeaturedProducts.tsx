@@ -1,7 +1,9 @@
 // Imports
 import {
 	initial,
-	stagger,
+	slideInLeftInitial,
+	slideInRightFinish,
+	slideInRightInitial,
 	arrayLoopStaggerChildren,
 } from "@/animations/animations";
 import Link from "next/link";
@@ -29,15 +31,23 @@ const FeaturedProducts: FC<IFeaturedProducts> = ({
 			<div
 				className={
 					styles.FeaturedProducts +
-					" featuredProducts p-4 bg-white bg-cover bg-no-repeat bg-center"
+					" featuredProducts p-4 bg-white bg-center bg-no-repeat bg-cover"
 				}
+				style={{
+					backgroundImage: `linear-gradient(
+								0deg,
+								rgb(255, 255, 255, 0.85),
+								rgba(255, 255, 255, 0.85),
+								rgba(255, 255, 255, 0.95),
+								rgba(255, 255, 255, 1)
+							),url("/svg/background/grid-background-06.svg")`,
+				}}
 			>
 				<div className="flex flex-col xl:flex-row items-center justify-between gap-4 lg:gap-16 py-4">
 					<motion.div
-						initial={initial}
-						variants={stagger}
-						whileInView="animate"
 						viewport={{once: true}}
+						initial={slideInLeftInitial}
+						whileInView={slideInRightFinish}
 						className="flex flex-col text-center lg:max-w-5xl w-full xl:w-[65%]"
 					>
 						<Title
@@ -50,10 +60,9 @@ const FeaturedProducts: FC<IFeaturedProducts> = ({
 						/>
 					</motion.div>
 					<motion.div
-						initial={initial}
-						variants={stagger}
-						whileInView="animate"
 						viewport={{once: true}}
+						initial={slideInRightInitial}
+						whileInView={slideInRightFinish}
 						className={
 							paragraph && buttonLink?.url
 								? "flex flex-col items-end justify-center text-center lg:text-left w-full xl:w-[35%]"
@@ -84,7 +93,7 @@ const FeaturedProducts: FC<IFeaturedProducts> = ({
 										whileInView="animate"
 										viewport={{once: true}}
 										variants={arrayLoopStaggerChildren}
-										className="w-full h-full p-4 border-2 border-pureBlack border-solid"
+										className="w-full h-full"
 									>
 										<FeaturedProductsCard
 											slug={item?.slug}

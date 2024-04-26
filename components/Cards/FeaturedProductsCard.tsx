@@ -18,7 +18,7 @@ const FeaturedProductsCard: FC<IFeaturedProductsCard> = ({
 				target="_self"
 				aria-label={`${name}`}
 				href={slug ? `/store/product/${slug}` : `/`}
-				className="bg-white h-full flex flex-col justify-between"
+				className="bg-white flex flex-col justify-between group w-full h-full p-4 border-2 border-pureBlack border-solid"
 			>
 				<motion.div
 					initial={initial}
@@ -43,7 +43,7 @@ const FeaturedProductsCard: FC<IFeaturedProductsCard> = ({
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="text-2xl leading-tight font-schaboCondensed uppercase font-thin text-left text-pureBlack"
+						className="text-2xl leading-tight font-schaboCondensed uppercase font-thin text-left text-pureBlack group-hover:text-primary-default transition-all duration-500 ease-in-out"
 					>
 						{name}
 					</motion.h3>

@@ -341,13 +341,6 @@ export const getAllFlexibleContentComponents = async (
 												title
 												paragraph
 											}
-											... on ${postTypeFlexibleContent}_RequestAppointmentForm {
-												fieldGroupName
-												displaySection
-												title
-												subtitle
-												paragraph
-											}
 											... on ${postTypeFlexibleContent}_Maintenance {
 												fieldGroupName
 												displaySection

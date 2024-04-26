@@ -1,9 +1,17 @@
 // Imports
+import {
+	fadeIn,
+	initial,
+	stagger,
+	initialTwo,
+	slideInLeftInitial,
+	slideInRightFinish,
+	arrayLoopStaggerChildren,
+} from "../animations/animations";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {ITestimonialsTwo} from "@/types/components/index";
-import {fadeIn, initial, stagger, initialTwo} from "../animations/animations";
 
 // Styling
 import styles from "../styles/components/Testimonials.module.scss";
@@ -19,10 +27,9 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({title, subtitle}) => {
 				className={styles.testimonials + ` p-4 bg-white flex flex-col gap-0`}
 			>
 				<motion.div
-					initial={initial}
-					variants={stagger}
-					whileInView="animate"
 					viewport={{once: true}}
+					initial={slideInLeftInitial}
+					whileInView={slideInRightFinish}
 					className={
 						title && subtitle
 							? "w-full flex flex-col lg:flex-row items-center justify-between py-4 gap-3"
@@ -60,14 +67,23 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({title, subtitle}) => {
 							?.slice(0, 5)
 							?.map((item: any, index: number) => (
 								<Fragment key={index}>
-									<TestimonialsCard
-										name={item?.node?.testimonialReview?.name}
-										image={item?.node?.testimonialReview?.image}
-										rating={item?.node?.testimonialReview?.rating}
-										position={item?.node?.testimonialReview?.position}
-										paragraph={item?.node?.testimonialReview?.paragraph}
-										reviewType={item?.node?.testimonialReview?.reviewType}
-									/>
+									<motion.div
+										custom={index}
+										initial={initial}
+										whileInView="animate"
+										viewport={{once: true}}
+										variants={arrayLoopStaggerChildren}
+										className="w-full"
+									>
+										<TestimonialsCard
+											name={item?.node?.testimonialReview?.name}
+											image={item?.node?.testimonialReview?.image}
+											rating={item?.node?.testimonialReview?.rating}
+											position={item?.node?.testimonialReview?.position}
+											paragraph={item?.node?.testimonialReview?.paragraph}
+											reviewType={item?.node?.testimonialReview?.reviewType}
+										/>
+									</motion.div>
 								</Fragment>
 							))
 					) : (

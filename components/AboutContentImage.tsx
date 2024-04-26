@@ -28,6 +28,7 @@ const AboutContentImage: FC<IAboutContentImage> = ({
 	contentBox,
 	reliability,
 }) => {
+	console.log("hello");
 	return (
 		<>
 			<div

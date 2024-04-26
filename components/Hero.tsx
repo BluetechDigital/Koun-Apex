@@ -47,7 +47,7 @@ const Hero: FC<IHero> = ({
 							),url("/svg/background/grid-background-12.svg")`,
 				}}
 			>
-				<div className="px-10 lg:px-20 py-10">
+				<div className="px-10 lg:px-4 py-10">
 					<motion.div
 						initial={initial}
 						variants={stagger}
