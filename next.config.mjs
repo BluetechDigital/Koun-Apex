@@ -5,10 +5,12 @@ const nextConfig = {
 		remotePatterns: [
 			{
 				protocol: "https",
-				hostname: "**",
+				hostname: `${process.env.IMAGE_REMOTE_PATTERNS_HOSTNAME}`,
+				port: "",
+				pathname: `${process.env.IMAGE_REMOTE_PATHNAME}`,
 			},
 		],
 	},
 };
 
-export default nextConfig;
+module.exports = nextConfig;
