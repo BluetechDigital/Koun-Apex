@@ -3,7 +3,6 @@ import {motion} from "framer-motion";
 import {GetStaticProps, NextPage} from "next";
 import {useGlobalContext} from "@/context/global";
 import {fadeIn, initialTwo} from "@/animations/animations";
-import {getAllProducts} from "@/functions/WooCommerce/Products/GetAllProducts";
 
 // Components
 import ProductLayout from "@/components/Layout/ProductLayout";

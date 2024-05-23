@@ -101,6 +101,7 @@ const Pagination: FC<IPagination> = ({
 											rating={item?.node?.testimonialReview?.rating}
 											position={item?.node?.testimonialReview?.position}
 											paragraph={item?.node?.testimonialReview?.paragraph}
+											reviewType={item?.node?.testimonialReview?.reviewType}
 										/>
 									</>
 								) : (

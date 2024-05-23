@@ -1,13 +1,3 @@
-// Imports
-import {IWooCommerceProducts} from "../context";
-
-/* WOOCOMMERCE PRODUCTS*/
-export type IWooCommerceResponseData = {
-	success: boolean;
-	error: string;
-	products: IWooCommerceProducts[];
-};
-
 /* GOOGLE REVIEWS */
 /* Fetch all Google Reviews from google */
 export type IReviewsRating = {

@@ -236,54 +236,6 @@ export type IThemesOptionsContent = {
 	noticeBannerTextarea: string;
 };
 
-/* WOOCOMMERCE PRODUCTS*/
-export type IWooCommerceProducts = [
-	{
-		id: number;
-		name: string;
-		slug: string;
-		status: string;
-		price: string;
-		weight: string;
-		dimensions: {
-			length: string;
-			width: string;
-			height: string;
-		};
-		description: string;
-		date_created_gmt: string;
-		images: [
-			{
-				src: string;
-				name: string;
-				paragraph: string;
-			}
-		];
-		// Seo Data
-		yoast_head_json: {
-			title: string;
-			description: string;
-			height: string;
-			canonical: string;
-			og_locale: string;
-			og_type: string;
-			og_title: string;
-			og_description: string;
-			og_url: string;
-			og_site_name: string;
-			og_image: [
-				{
-					width: 1000;
-					height: 718;
-					url: string;
-					type: string;
-				}
-			];
-			twitter_card: string;
-		};
-	}
-];
-
 /* CONTEXT PROVIDERS  */
 export type IPageContext = {
 	seo: ISeo;
@@ -297,7 +249,6 @@ export type IGlobalProps = {
 	navbarMenuLinks: INavbarMenuLinks;
 	footerMenuLinks: IFooterMenuLinks;
 	storePageContent: IStorePageContent;
-	wooCommerceProducts: IWooCommerceProducts;
 	themesOptionsContent: IThemesOptionsContent;
 };
 export type IGlobalContext = {
@@ -307,7 +258,6 @@ export type IGlobalContext = {
 	navbarMenuLinks: INavbarMenuLinks;
 	footerMenuLinks: IFooterMenuLinks;
 	storePageContent: IStorePageContent;
-	wooCommerceProducts: IWooCommerceProducts;
 	themesOptionsContent: IThemesOptionsContent;
 };
 export type IPageContextProvider = {

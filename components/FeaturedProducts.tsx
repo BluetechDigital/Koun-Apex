@@ -82,8 +82,8 @@ const FeaturedProducts: FC<IFeaturedProducts> = ({
 					</motion.div>
 				</div>
 				<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 items-center justify-center gap-4">
-					{globalContext?.wooCommerceProducts?.length > 0 ? (
-						globalContext?.wooCommerceProducts
+					{/* {globalContext?.commerceProducts?.length > 0 ? (
+						globalContext?.commerceProducts
 							?.slice(0, 5)
 							?.map((item: any, index: any) => (
 								<Fragment key={index}>
@@ -106,7 +106,7 @@ const FeaturedProducts: FC<IFeaturedProducts> = ({
 							))
 					) : (
 						<></>
-					)}
+					)} */}
 				</div>
 			</div>
 		</>

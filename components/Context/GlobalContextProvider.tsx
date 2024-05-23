@@ -17,7 +17,6 @@ const GlobalContextProvider: FC<IGlobalContextProvider> = ({
 					footerMenuLinks: globalProps?.footerMenuLinks,
 					navbarMenuLinks: globalProps?.navbarMenuLinks,
 					storePageContent: globalProps?.storePageContent,
-					wooCommerceProducts: globalProps?.wooCommerceProducts,
 					themesOptionsContent: globalProps?.themesOptionsContent,
 				}}
 			>

@@ -28,7 +28,6 @@ import {getAllTestimonialsContent} from "@/functions/graphql/Queries/GetAllTesti
 import PageLoadingSquares from "@/components/Global/PageLoadingSquares";
 import GlobalContextProvider from "@/components/Context/GlobalContextProvider";
 import PostHogContextProvider from "@/components/Context/PostHogProviderContext";
-import {getAllProducts} from "@/functions/WooCommerce/Products/GetAllProducts";
 
 export default function App({
 	Component,
@@ -76,7 +75,6 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		footerMenuLinks,
 		themesOptionsContent,
 		testimonials,
-		wooCommerceProducts,
 		storePageContent,
 	]: any = await Promise.all([
 		getMobileLinks(),
@@ -85,7 +83,6 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		getFooterMenuLinks(),
 		getThemesOptionsContent(),
 		getAllTestimonialsContent(),
-		getAllProducts(),
 		getStorePageContent(),
 	]);
 
@@ -96,7 +93,6 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		navbarMenuLinks: navbarMenuLinks,
 		footerMenuLinks: footerMenuLinks,
 		storePageContent: storePageContent,
-		wooCommerceProducts: wooCommerceProducts,
 		themesOptionsContent: themesOptionsContent,
 	};
 

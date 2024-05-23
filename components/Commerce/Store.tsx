@@ -187,8 +187,8 @@ const Store: FC<IStore.IStore> = ({
 							/>
 						</motion.div>
 						<div className="grid items-start justify-center grid-cols-1 sm:grid-cols-2 gap-4 px-4 sm:items-center lg:-mb-8 lg:gap-10 lg:-mx-4 lg:grid-cols-4 lg:justify-between xl:-mx-8">
-							{globalContext?.wooCommerceProducts?.length > 0 ? (
-								globalContext?.wooCommerceProducts?.map(
+							{/* {globalContext?.commerceProducts?.length > 0 ? (
+								globalContext?.commerceProducts?.map(
 									(item: any, index: any) => (
 										<Fragment key={index}>
 											<motion.div
@@ -212,7 +212,7 @@ const Store: FC<IStore.IStore> = ({
 								)
 							) : (
 								<></>
-							)}
+							)} */}
 						</div>
 					</motion.div>
 				</motion.div>
